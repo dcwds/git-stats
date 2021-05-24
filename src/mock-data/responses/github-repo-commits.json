@@ -1,0 +1,1895 @@
+[
+  {
+    "sha": "a1702b8920a088ff7080661a8c1282fb568fea58",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmExNzAyYjg5MjBhMDg4ZmY3MDgwNjYxYThjMTI4MmZiNTY4ZmVhNTg=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-05-12T15:27:41Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-05-12T15:27:41Z"
+      },
+      "message": "fix(deps): add preact-render-to-string to fix deployment issue",
+      "tree": {
+        "sha": "c9bad02241239e90aa98264769e0ff7c50c681b8",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/c9bad02241239e90aa98264769e0ff7c50c681b8"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/a1702b8920a088ff7080661a8c1282fb568fea58",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmCb8+0ACgkQpP3Dvzdk\nDwyFSg//YTNXvws2Soz/p3YOJjx7i3arX+/VdJsWb9hAgHdqDp1EPU7IToyxneFX\nptGQXptOjKZeyoSN1tDkrCsu9y9b88Y5Ns+pB2LNvp91cyMjzX3oRv1bhm93bGTM\nlsmXfViUToBMgKxgCbb+Q3ujF7ylvCdywiJi8RDZd4CqJTRghHuut4PSa//wrfnr\nipHjok4eiZLZBDn8DJWcrMP9CWRSly1MAebRegefUu5M2nrs2sx08wkwVOwUKEeS\nrpYXJp0uTKv9RRvDQ0I2sUPlCOACuywVxJPChZ9m4+pZohlLHRl6qZI4QiLvy0nc\n5hNzcfxoETeZcwO6188cjDJcnLjsSgCnRtmyZjC2iP8dmsUDazxdxiX57mvbBL4E\nH/PGfcWF9JAolSp7IXlaloaE3Wathy5mvM+yAXjH0xg51RvwbMdnurT3ifYEqIXq\nv4MtvXABCG5jG36iAFVZd/w+mUbpryqcSUS1DGbIJY1EzR+Hl2iOHImTfxKpJPGl\nUPDucnSMXMNBgEtMvcNREOfgZs0C6Hj4Xs+aQR8JkUMD2Qi4bOGQLXe91RZn2hlb\nJIjlprhJNUicid2PCpJBaa4OWVMeEtvhLyZ3ANNAkUVN5YPKxev9t6D5QiKE7a45\nlAjhXY65+HBVplf5McRInycU8Wugn8I5pET9/O6NNl0Yit5nB/A=\n=W5es\n-----END PGP SIGNATURE-----",
+        "payload": "tree c9bad02241239e90aa98264769e0ff7c50c681b8\nparent e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d\nauthor dcwds <dcwds@protonmail.com> 1620833261 -0400\ncommitter dcwds <dcwds@protonmail.com> 1620833261 -0400\n\nfix(deps): add preact-render-to-string to fix deployment issue\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/a1702b8920a088ff7080661a8c1282fb568fea58",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/a1702b8920a088ff7080661a8c1282fb568fea58",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/a1702b8920a088ff7080661a8c1282fb568fea58/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d"
+      }
+    ]
+  },
+  {
+    "sha": "e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmU5YWM4MzI5NGY4OGZhM2E1ZDM5ZmRmOWU0MTVjNTU1ZmRmNmUwMWQ=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-03-17T14:01:42Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-03-17T14:01:42Z"
+      },
+      "message": "chore(gatsby and deps): bump to latest",
+      "tree": {
+        "sha": "8fadce2fa9a6645280154a2a7d68e614491fbe58",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/8fadce2fa9a6645280154a2a7d68e614491fbe58"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmBSC8YACgkQpP3Dvzdk\nDwzeRA/9ExxBtfVsymnnDnt+1ZmK/nScue/cPH3s+JzZsRFGaNhP8J0tl7b6tcR5\nwcUKJdK/9b/V7GD6W1ESU2ME6ESLb+78Z3r0wQTQGK8QpLMOVwQJbZS78ZyJqnKO\ntjGGGIAmPFMp/MNrfNDO6XBKVFQSBgZ2M7QhxmFgt5CVyBzS7K5EmE1NJoHFCgj+\nkSGhkplMAIq7sPofNb3upXPzapDr/RDaCpG9gTMgLzWSQBWclQTPTJtp4pfK7zhP\nSooFU89V5xDBecb/avtkB+FlJ4YX5XNTb7qmuEyLvSvN1QIt2iFUbKdQWUmW7/zT\n5j+CpOOlyvqRmO9pn3//UcpN81wb2iZ388MqP26zmRVbBRH60SOeYoA0lh3BSe9e\nJ089seRNy6e/5K28pUeWo7tNhqwdEkZ6UH385q/eXOkwHPqtmiOEWPr6LK8YgK1y\nnIQ1m1GhQ8pBYGFrVFf1qoa8YPUGp2bx7IqdP8AbFYKToLon2low83KAdVxH5xjL\nTwl4Y+E4C9ABIV/X93e+D5z1NqSprz907MtNcWciqmgOiMbdFf6JNlgURnzWUOcY\n7qAC2NznIpZ5rZI1/n3TmgrKqdxdJhi9yDULViaF4grVfI5Dyl45ROuyVGdfV1C+\nwZpkAH4j8odgFUrap+vxPlg+DTyKIh0BBjTK60uDpve7sShXnjk=\n=RTAg\n-----END PGP SIGNATURE-----",
+        "payload": "tree 8fadce2fa9a6645280154a2a7d68e614491fbe58\nparent 5ed587a80b583092288111ff159f4694fdc6e7f4\nauthor dcwds <dcwds@protonmail.com> 1615989702 -0400\ncommitter dcwds <dcwds@protonmail.com> 1615989702 -0400\n\nchore(gatsby and deps): bump to latest\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e9ac83294f88fa3a5d39fdf9e415c555fdf6e01d/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5ed587a80b583092288111ff159f4694fdc6e7f4",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/5ed587a80b583092288111ff159f4694fdc6e7f4",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/5ed587a80b583092288111ff159f4694fdc6e7f4"
+      }
+    ]
+  },
+  {
+    "sha": "5ed587a80b583092288111ff159f4694fdc6e7f4",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjVlZDU4N2E4MGI1ODMwOTIyODgxMTFmZjE1OWY0Njk0ZmRjNmU3ZjQ=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-02T16:53:28Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-02T16:53:28Z"
+      },
+      "message": "fix(styles): use explicit class names so Tailwind can purge correctly",
+      "tree": {
+        "sha": "533313f32e2d430aa9a18e85519b994fe15ee4b8",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/533313f32e2d430aa9a18e85519b994fe15ee4b8"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/5ed587a80b583092288111ff159f4694fdc6e7f4",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAZg4gACgkQpP3Dvzdk\nDwwZmg/+MGW9dnOBxMVUfyPfH0/xsyGSCbQo611NOEztJfb08RnQ08HNMxaBDbIy\nbvgw/KvlcqQr+S63BliMzKeato0zBmsPAIEd4E2iTTh467SA6N71ud5gAkmy8ptC\nI9TKqLUEXuWcQQ1f1ROx5Hdda96Rja7Qs1ymEK4SsO3fJQlnn1wq063FKvmyWQSa\nuROI/xnhF0cB8YsrsI6kZE1SMcCu6U9DFZpNv0Fb1GVOncifFPXmsGe59+YoK4oc\n/nOcnW+Y/oEAfBWz0iu8CI02wYRMUIWDY80+ZfoSHxu6guPtds0TurinZTBNk/8r\nDf1e8a7hD8mGcr06yFcmycGG70iZd9KbGEZITnRZV8S+mzR0NsirEsxWQ6uL6B4a\nX6GSJZ5Qpg6l1VDaoXxfWXat3zMUdsRbkG55v97TShQYRH7mzr/mGCO5cnzqG1Ra\nclhwbxV6G4dPj2iNpd68Mw8hdyW8SRtGT79W7emie4xeaoqDYAnfgt1duTeeK4YI\nH8XcsWQ7xe+XYoqllcRecPKNWZlX/6kO6Wz8s0OeEiTNIX54637PjlTAjKVCyJwM\nlrbBcg7M3xnoRt8wJFPodDSthWf0xd3svICp6Hql6tR0/VVaqpEHEecAX/99ZvUI\n/g06aUD59Y4VHs7RhkmAAgkwj8KZVS9lE/crFZeaFgnxYjdNj5Q=\n=0Lm6\n-----END PGP SIGNATURE-----",
+        "payload": "tree 533313f32e2d430aa9a18e85519b994fe15ee4b8\nparent a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8\nauthor dcwds <dcwds@protonmail.com> 1612284808 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612284808 -0500\n\nfix(styles): use explicit class names so Tailwind can purge correctly\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/5ed587a80b583092288111ff159f4694fdc6e7f4",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/5ed587a80b583092288111ff159f4694fdc6e7f4",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/5ed587a80b583092288111ff159f4694fdc6e7f4/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8"
+      }
+    ]
+  },
+  {
+    "sha": "a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmE3Y2VjOWEyMmFhZTdjNDBmN2EyZDk3ZjUwYjdiZTMyY2VmOWVlYTg=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-02T02:43:55Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-02T02:43:55Z"
+      },
+      "message": "styles(color mode toggle): change colors of color mode icons",
+      "tree": {
+        "sha": "effcb056db795a725a4e4066935019b841bfdb22",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/effcb056db795a725a4e4066935019b841bfdb22"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAYvGsACgkQpP3Dvzdk\nDwyL1w/+IfD2nPZo/nrVDbe4zsa6Uh0hS2Zv1NKwMt/A2nyAPVo/rdzlRll55O4f\nE+8S2sCHtQ6sItKMm36LER1933fXhS/FODY7da933OqzHuFs6yqm0Xr4SLumeM1P\nictbhaD8IgCH2EvbmN4NXD1KhYIJ/wCMExEANuGXXJR+ggEQeOhAvCX+MI3LnwCx\n0uAV1q22C5+IRABP0NwQCU4ah2spQZFhlS1iPpCQRob0iTJdsS0mwyjib4+ZMbyY\nU/24Zxia+pBWGX3OdcnCB8ttS1OfBW+kw1fvQQlqCtBtMbMluaed4O9FandH4i2G\nZE2HjDks4dtq/6NqXHUahchBySJk9JoQ/wjP4UubmlKwJCcs9MFYiwfEt7ajvCX8\ngTQjeiSV06Hao28hs/Jv/PDw7zEHMGAaJiAc2XyeklZVSqFT6iDrvGqvjMlgy5gb\nt2NdqJueS5eQ1dP6f12AwELoVZyPMX30Q8JC8MLMDW/gn2hzDERXbE65R4WJBGNX\nL4Ca9pU5AlTBkEjKCnteKCcS9uPyZCozQNoHWVetm2CBuAFP8eaab9FU9nIlOYBv\nCcZWddL4m8gLqF8POWxMgnG0Xt/FLzlBC9ozFL4seMik79RZqpTY1vIPg4vc8rzq\nQw9KOajSfKEntA/VMCjMtYag879rtzgZci+dg/R4MX9EHwFnrJE=\n=f0uB\n-----END PGP SIGNATURE-----",
+        "payload": "tree effcb056db795a725a4e4066935019b841bfdb22\nparent 821bf147ae4ae78f2b6345b0852455819bb3e965\nauthor dcwds <dcwds@protonmail.com> 1612233835 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612233835 -0500\n\nstyles(color mode toggle): change colors of color mode icons\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/a7cec9a22aae7c40f7a2d97f50b7be32cef9eea8/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "821bf147ae4ae78f2b6345b0852455819bb3e965",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/821bf147ae4ae78f2b6345b0852455819bb3e965",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/821bf147ae4ae78f2b6345b0852455819bb3e965"
+      }
+    ]
+  },
+  {
+    "sha": "821bf147ae4ae78f2b6345b0852455819bb3e965",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjgyMWJmMTQ3YWU0YWU3OGYyYjYzNDViMDg1MjQ1NTgxOWJiM2U5NjU=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T23:27:57Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T23:27:57Z"
+      },
+      "message": "chore(preact): swap to Preact from React for performance boost.",
+      "tree": {
+        "sha": "fc16f1a6858a2b2371ad1b3144af5b1383ef489d",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/fc16f1a6858a2b2371ad1b3144af5b1383ef489d"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/821bf147ae4ae78f2b6345b0852455819bb3e965",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAYjn0ACgkQpP3Dvzdk\nDwxaZxAAo8hWpnwQYfYeHHBJeL2Hi9ilEb8WSDGtUe3YBBOWRjXRFCvPPKFayOzR\n0J+sSVtfgMcEFqnCzC7/5kZVMdQ+ytxhnHm+CdjAy7cdA/xPEX0rVn2fP2273FkD\n2vyo+iWtEulmqhnphNTvGg+mQk+LPv0AIvIT5pVGPBmrEv6DupHi+QISsT2E0kn+\nEl+SMGPKMrF5nD7rB+Nq0Nnjf+Lue2tp9KNBD1wpPxEWtEPbiU7I9T/3poVSPJYl\ncS1gGBdpxPvvYxBJ/J2hUzdbNtUrpGbu7gDGCPGlXKw7FtRFSmcQ3uL5zSZXzTNA\nRIXimldZay9O8c13mRK/GY1Ir6bXkXj8WBSe53xpIsiyt11KBgjX0xw1rTIlWQFs\noc81h+lZeJsLt2kNpJG6j7y+x1Ni/prEDBGkngAeQEig2sMHvMeR9kxGrmFhQ/QH\nwbAWFO2Ef7fuYDzxpGGxi3pipDmo1sHXmaCYEfNoHIzkYNZQSYn2kX0qavsvyo1C\nobUVUZfzQ7xh80EDuU5HMjziVgJXV7J/VCKGOrG5t9cKnTEcG+gFu8BhF4g7XikY\n6DuAzeXBZS/u0t4OdKqPJ4V9dbGaoGslFaZ9Fn1LJTwoAhXYlZcph8GBhPLVYBuc\niI5taWvwdbUmwqmNQlKxJkanf8gFNhJoSjYnn5yqfJicfKgc0Eg=\n=CkGh\n-----END PGP SIGNATURE-----",
+        "payload": "tree fc16f1a6858a2b2371ad1b3144af5b1383ef489d\nparent e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f\nauthor dcwds <dcwds@protonmail.com> 1612222077 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612222077 -0500\n\nchore(preact): swap to Preact from React for performance boost.\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/821bf147ae4ae78f2b6345b0852455819bb3e965",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/821bf147ae4ae78f2b6345b0852455819bb3e965",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/821bf147ae4ae78f2b6345b0852455819bb3e965/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f"
+      }
+    ]
+  },
+  {
+    "sha": "e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmUyYzFkYTVmN2MxY2E2YzA5Njk1ZDU4N2M3MWViYmZiYzViMzg4MWY=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T20:53:46Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T20:53:46Z"
+      },
+      "message": "chore(optimizations): improve lighthouse score",
+      "tree": {
+        "sha": "78dbee291ba2ae734d29e63ca178e0a1a2a3fd15",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/78dbee291ba2ae734d29e63ca178e0a1a2a3fd15"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAYaloACgkQpP3Dvzdk\nDwwBMQ/9FYCrT+MaCT9A+yvIN63ezZ77dDLb4Kb0g7sW15NQ2IV0DI4TXrCyrNts\n432JNQB4IelvPnYnaGrX7CBvi3JJ1I5uj48COa8PXqFWcxrLB5/Zj84WgvrB4+M9\nB4o9192jh4jPFSEdXqfOTMVBamdjSDe7D30VHlI4Bk691ndRWqrcenGSa/VvJYS5\nDlPxY5wzZXqCctYU12Ulnr/QzGEdq9/7nWstY5FJ3EMTUtghO8Vs1PU/IHJnFeZb\nG/odxr28ELr9f75+Mnt2ckp8ntvEwyXWHtqDXKMdxetF/+WcU1ieq8shTHK7i4m1\nOPb81/WEIOqmJhJ8/8+spOyixRXd3PgQCZ5MTDKAjmluhWmxm0W1z/ssar9VhSmY\nff3XzWBFU+NoSBJ6fjT6Tv90CzT9cv89JOm0Ta8VVg92QfoQ/WfkHtDg9Q1++3Gi\ndKhiMsaZzqYEOki5DaLI2t8bMm8KCWSxdltFazptZDPGoJnqvaLf/DaPhNSFE+yU\ny/Javr6tgvIUIBIprMAWiz4nNgUn6Syph9sOH9ixJmNVxL7lxUs2WPkAvPmpV7b8\npUIjSGunB90gcy0C2SI0GJplbtp3vB9MUo5ckNAHzC2piYpxb/HUkWgnPhNWjiTw\n5/tanyqsBJ9O3lcWBDfvzvGwesKlF2ib9sq/Y+bWbis0hn25j5k=\n=zP2h\n-----END PGP SIGNATURE-----",
+        "payload": "tree 78dbee291ba2ae734d29e63ca178e0a1a2a3fd15\nparent 69db0857b3b93a9dbeaa0206fecd783e7bb105cf\nauthor dcwds <dcwds@protonmail.com> 1612212826 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612212826 -0500\n\nchore(optimizations): improve lighthouse score\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e2c1da5f7c1ca6c09695d587c71ebbfbc5b3881f/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "69db0857b3b93a9dbeaa0206fecd783e7bb105cf",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/69db0857b3b93a9dbeaa0206fecd783e7bb105cf",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/69db0857b3b93a9dbeaa0206fecd783e7bb105cf"
+      }
+    ]
+  },
+  {
+    "sha": "69db0857b3b93a9dbeaa0206fecd783e7bb105cf",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjY5ZGIwODU3YjNiOTNhOWRiZWFhMDIwNmZlY2Q3ODNlN2JiMTA1Y2Y=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T05:17:14Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T05:17:14Z"
+      },
+      "message": "chore(color mode): clean up UX",
+      "tree": {
+        "sha": "425ce0e07d708ad21e581dfadd32b455c7ac8e58",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/425ce0e07d708ad21e581dfadd32b455c7ac8e58"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/69db0857b3b93a9dbeaa0206fecd783e7bb105cf",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAXjtoACgkQpP3Dvzdk\nDwyjBQ//Wir097+eEfDUCG+vEQj16FZp5A0U/EWM0JYXg76ZPxr0oA/6vRpDRuTz\n21DLGnlStXBLfy6tgRSjy/MWwbBBKNAfTSM+oz9/BvGbIxq5G2efIKZWDdxfP4Uh\nnrT2ghArp3EAIJvvzT1va8EiJ8v04Zus/L9dsoMG9PCdXHHl3deB5VZ+0D32L+uW\nz2pViLcCo29wihmhz/TkMYr5MMwp8N70zyceitNFver/5ZCF+cXLx2UVxrpg/ZFw\nET0eAlElM0puawG55NogWxPd5qD/3y+BZzBh77vpl+9Breuc0p4sapbEgRNasO2w\nUseeCbnZsxTxWY3lEk2nhjzlgKYxXx/G0R3cWu8DXI1jQeF/sfwkFo8USDetK0jV\ndtBhja04VvFJHNmK5wPjGF2lDPMY/0bBxe7SXUEz5Kgs3CqnYPQkMziCOgEgKsay\nPKe5IVqOMZeBqTLCV6Sui+efM19aX4b8q3tLhSB3S/9TtBzBmfr1nf125sJBTzB1\nMhtqQi0gh36pIb5umvF0Uaz1bn9UX7y0vqsppWgKrzv2ZsIr2wr2e3pC9FP4Wo4N\n3bwhn6H2vzdcF+OEGLRYpB9SEiXqqxFbo83aBtlV3MTF1Sij0NzRL/Vl06vAT+hr\nxbFS2NCpT2c/8HXOmsI8WxbGGKWIdJNmMKIkzsjZtD5UCsZFBiE=\n=CuZd\n-----END PGP SIGNATURE-----",
+        "payload": "tree 425ce0e07d708ad21e581dfadd32b455c7ac8e58\nparent 3e491a26b8ebca5b0f1205bce2cd105325049b67\nauthor dcwds <dcwds@protonmail.com> 1612156634 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612156634 -0500\n\nchore(color mode): clean up UX\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/69db0857b3b93a9dbeaa0206fecd783e7bb105cf",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/69db0857b3b93a9dbeaa0206fecd783e7bb105cf",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/69db0857b3b93a9dbeaa0206fecd783e7bb105cf/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3e491a26b8ebca5b0f1205bce2cd105325049b67",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/3e491a26b8ebca5b0f1205bce2cd105325049b67",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/3e491a26b8ebca5b0f1205bce2cd105325049b67"
+      }
+    ]
+  },
+  {
+    "sha": "3e491a26b8ebca5b0f1205bce2cd105325049b67",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjNlNDkxYTI2YjhlYmNhNWIwZjEyMDViY2UyY2QxMDUzMjUwNDliNjc=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T04:21:04Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T04:21:04Z"
+      },
+      "message": "fix(color mode): prevent color flickering on initial load and untrack public dir",
+      "tree": {
+        "sha": "5536c0b3ac229229b8906bde7482a799f10ea146",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/5536c0b3ac229229b8906bde7482a799f10ea146"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/3e491a26b8ebca5b0f1205bce2cd105325049b67",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAXgbAACgkQpP3Dvzdk\nDwyX+BAApaS/YKoa9x/MACT8wQW2tNl8nd8Yg6kODi9iHj7ufBqI7//PrWudM+xM\nL6MbS97UG+8OtwD00Xk8o1pV4XPLGlUFiCKRKH6n2nYLM5Q+GGbymSiysl7oOWwI\no1qfJmfPMH1sTtsFOJ2PR06n32QQDo6qF8danotGtt4EAuTrlX2NPsg4iwKLIS+a\nkUT9Yf5XEL7gBVAaaPzG5iPkfWWAT61GO2KILxsuEmPHxPlyKc1JQTtHoRNJuEsM\nnDSctS4paPbshy96+5wad+zl0TM+d1LZSQLT+NVZpqP+tAQKValcPtq+VV2U8ibj\nxamkMC2O8LZphP0MuSBLwTuk/dKOJtLVgnpsR65tILXba9lRj4eSuZ97FxLMGw2n\ngSU4W9niL7E0NOndkcZeQSleeMTHLXbfmYoCS+vgfHXp9r94t7JqA1vimwIWvEbl\nvFm8LInaL3nVHm1o09/CPwL/o0bwuANiwed67tq2WUJ4L0eM6NOVe2TNy0VdCMm4\nLENV1LHNEO0wHH4h71s9lEyfzqB4sUotA2ZE90U3efZVRH/QIeT2AsaWcGQylros\nyc3B9jRvoQQlhI5yn9ltzkEFPBxEAHkZoGza+8pXQqlFyxYbT3XACWqtWDzOGF51\n/Wd9WoGB2RGhlMv9Io6tAkXIWndTuBB11dxP6b2Ez0tY+qs9Pzk=\n=r3/7\n-----END PGP SIGNATURE-----",
+        "payload": "tree 5536c0b3ac229229b8906bde7482a799f10ea146\nparent b12c928404a2ac14087af6e8ada8536b777cca11\nauthor dcwds <dcwds@protonmail.com> 1612153264 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612153264 -0500\n\nfix(color mode): prevent color flickering on initial load and untrack public dir\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/3e491a26b8ebca5b0f1205bce2cd105325049b67",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/3e491a26b8ebca5b0f1205bce2cd105325049b67",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/3e491a26b8ebca5b0f1205bce2cd105325049b67/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b12c928404a2ac14087af6e8ada8536b777cca11",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/b12c928404a2ac14087af6e8ada8536b777cca11",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/b12c928404a2ac14087af6e8ada8536b777cca11"
+      }
+    ]
+  },
+  {
+    "sha": "b12c928404a2ac14087af6e8ada8536b777cca11",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmIxMmM5Mjg0MDRhMmFjMTQwODdhZjZlOGFkYTg1MzZiNzc3Y2NhMTE=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:37:09Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:37:09Z"
+      },
+      "message": "fix(build crash): more checks on window",
+      "tree": {
+        "sha": "acac70fa400db7d7940eb3579dd2a022bd8bb881",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/acac70fa400db7d7940eb3579dd2a022bd8bb881"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/b12c928404a2ac14087af6e8ada8536b777cca11",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAXTTUACgkQpP3Dvzdk\nDwylmw//ZeNZGbhnwwiSJbDDilWB2ySo7AqgDQayj3S7zGkih6qb8HmNwG9CnDBR\nknJqDBaaEbHHGDT9DqJTr5ro6ZEY5v9D/vNbZ0rz+2b0XzAfqVU2JbtwPBAzustS\nAYWjBqXWgPcuBu04X+ip5cJLk3tXZ68ikSuDQTOklL4qwgwA93mhcuxFfSWVYbs7\nUkeGsx0P6XlQLii+uSBvXT85/geuonpaS3svMv2vttU+B5oWiS5vpwsQuqCzMrAr\nsRHTrV0txjC+jUz3+v809Z8aDnsDaBBIc9hR21UZ5wceYaH0NxSpK6Etw/chCBTZ\njU+VdpYgZFpnYShE1LZgG6wWRbkrdbS67WLdPDtePfXWNLc93bT5Yhl022pJqaYJ\nyZlK4UTLvdp0YQP2a2I5KEoqbjV5Fn3VWa9pxlZUUEpYr5KvuAZqIlW93K9Yh+9d\n4Y13f8vFg+MVPYx0XyUwkm2ioFvCdEWCkNcjCX0NyPPD9rPymjVADPKic+hLAmpq\nZu8Om7YNBI+AyOQuJE9NDPo04HrcuGXFv6icgDCIGCcKJAucplJrSw/M3BrppQEh\nB34yFd4YODbWAWpO9UhJSs0l4aPD9njRMLsRsXr55JSTwhnSYv0QpkpAOqzIaQi+\nzdRx2NA/dh/Nzo+Ebv06BSlOxO42QM9ufi57jLSW1TPALNrp96I=\n=6Jea\n-----END PGP SIGNATURE-----",
+        "payload": "tree acac70fa400db7d7940eb3579dd2a022bd8bb881\nparent b1e4003d122a87daf9cbb507f872b5ebd5ffd09b\nauthor dcwds <dcwds@protonmail.com> 1612139829 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612139829 -0500\n\nfix(build crash): more checks on window\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/b12c928404a2ac14087af6e8ada8536b777cca11",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/b12c928404a2ac14087af6e8ada8536b777cca11",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/b12c928404a2ac14087af6e8ada8536b777cca11/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b1e4003d122a87daf9cbb507f872b5ebd5ffd09b",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/b1e4003d122a87daf9cbb507f872b5ebd5ffd09b",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/b1e4003d122a87daf9cbb507f872b5ebd5ffd09b"
+      }
+    ]
+  },
+  {
+    "sha": "b1e4003d122a87daf9cbb507f872b5ebd5ffd09b",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmIxZTQwMDNkMTIyYTg3ZGFmOWNiYjUwN2Y4NzJiNWViZDVmZmQwOWI=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:27:42Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:27:42Z"
+      },
+      "message": "fix(localStorage): fix namespace issue with localStorage",
+      "tree": {
+        "sha": "ee95b47898bd812fcaf848bc694df239496fbfcf",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/ee95b47898bd812fcaf848bc694df239496fbfcf"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/b1e4003d122a87daf9cbb507f872b5ebd5ffd09b",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAXSv4ACgkQpP3Dvzdk\nDwzDPQ//QwXQ21OAxWW4R7JCta7s9KMuZqSLFQO4+RD3xl9AqOgzO3FZrnCTdk90\nkd67R5gLjXmGna9Z9+XkFMVPNn7R6m7/+r/0M/letw5PIig/rAdwjsOvfcdepjlp\nm6+YrYbK8vS6xYiYkNc3YpM4e5vt2VSyX2U+UJxYaxjWPlpeHN9UPy6awzrJiH33\nY5BPjpMpsgqbsTDDbhubV5BqJC7pUT2QXcm4teiveytA6RhlWZbLznr7QR52lvss\nfZpDUXOaHuIdG06XDWAmHVFA6lQ80Ra3bxR+QsSjmURXUmfWgBb9v0ow2GvIldQJ\nMViZc0ZVVG/tgKtg40kvICiNezqDl087QddyxAWNQvw3IZ6hd8fa3b/vC/BMebXX\n38en0azdWpGHR8fXmUxt4H4pLg+LjMu7TEeh1kifg8F1Jl/AoRJeaKtMQ9SWRxmN\nFq1pGVypq3hsl8t1/bfV881Lcn/L+6Ng1GeDDhIVIa5uXfDBGiKRddnkwE7x+/ca\n7lK2wzR5orYNkgfALRWBd9a/sYWiZUWK2s46ReigMoblnPTnMYKiGufzJKRyN5EE\nyLX6T0XEv8l3iM+44UwUGhJc9Q3JB3LcH0nFYC2D2/hg1cbmBmAusS60PYuvwWm9\nu/hqrFakbGcC1mU8JqT8FGMps9/OufvyREkVTPwpj47zbvjHkH8=\n=Y9Pc\n-----END PGP SIGNATURE-----",
+        "payload": "tree ee95b47898bd812fcaf848bc694df239496fbfcf\nparent f091b0886b788ec3c8c3f12a4958c3ff4e6993ef\nauthor dcwds <dcwds@protonmail.com> 1612139262 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612139262 -0500\n\nfix(localStorage): fix namespace issue with localStorage\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/b1e4003d122a87daf9cbb507f872b5ebd5ffd09b",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/b1e4003d122a87daf9cbb507f872b5ebd5ffd09b",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/b1e4003d122a87daf9cbb507f872b5ebd5ffd09b/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f091b0886b788ec3c8c3f12a4958c3ff4e6993ef",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/f091b0886b788ec3c8c3f12a4958c3ff4e6993ef",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/f091b0886b788ec3c8c3f12a4958c3ff4e6993ef"
+      }
+    ]
+  },
+  {
+    "sha": "f091b0886b788ec3c8c3f12a4958c3ff4e6993ef",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmYwOTFiMDg4NmI3ODhlYzNjOGMzZjEyYTQ5NThjM2ZmNGU2OTkzZWY=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:21:36Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:21:36Z"
+      },
+      "message": "fix(localStorage): put in check for localStorage so Netlify doesn't fail on build",
+      "tree": {
+        "sha": "ff766f8f49f66c1f90f2c769fcdc690682b97ed1",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/ff766f8f49f66c1f90f2c769fcdc690682b97ed1"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/f091b0886b788ec3c8c3f12a4958c3ff4e6993ef",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAXSZAACgkQpP3Dvzdk\nDwx2ig//UU22xPPUo1C6D1kPx6t/x43UyatbX2DKGJ29MC4LfoMoNtXSEm8WXVOS\nHiMQ/kB4ehry0BzYPGGQasFB1v3EWCLBuBwAFnhf3fIpb6QpmPmVmgdPxdkzxHzW\nq6WCsq8Nu8D3QySX0RTSQoUUAalYuqoQF4ZE8EOwWMoiNb6XKPvjk4ZGB9UGIr2I\nEJfa3/+7Z0DyFCz7a5g5cFrRhisM42E0exQhqqPz2a50uqVcB0ek+XVkJzh67KTS\nKERI8+pjaqVFUxyS96UwNlQzGhYJ5x/9lHTllSZ2Y7izcT8OPxJAyuDVd+DHvXPG\nMlYHNpbgx+A4zYMgiljV4Qyzihy+sSPOSH0jNPjsEtPuzMIUY5RoX0+bl2mhgJgs\nWnbzyV0hqCtPfdodbj+4h7fJ9aLPrFdqkNNgUKaMsJHjftOeRk7IsXy9PMx7oEHP\nqyA88bitX6E1V+k+zPBlaVYqpJmGzhrFNz2QNfWNxda1kOugh8xtOhER29td9Xuj\nFZ7bx69gjbwoq27EBPPmo7d4y+GQfpT1hYdFgPunINQSTYPX5mM/ttZAYXbaUB5H\nSaOBbS7WjIOr2WPvBM7zJgMW5evBlXoQ04xghoJOw4L5e2WZscI5Uajc96n1RBSW\n0wOs7cWLa3HtwacZ8qV9vTJ0hVE99TTzNnic4Idgm1KFejHKl/4=\n=MtER\n-----END PGP SIGNATURE-----",
+        "payload": "tree ff766f8f49f66c1f90f2c769fcdc690682b97ed1\nparent 354f30cf248879b62200313b275819cd7d2dd182\nauthor dcwds <dcwds@protonmail.com> 1612138896 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612138896 -0500\n\nfix(localStorage): put in check for localStorage so Netlify doesn't fail on build\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/f091b0886b788ec3c8c3f12a4958c3ff4e6993ef",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/f091b0886b788ec3c8c3f12a4958c3ff4e6993ef",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/f091b0886b788ec3c8c3f12a4958c3ff4e6993ef/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "354f30cf248879b62200313b275819cd7d2dd182",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/354f30cf248879b62200313b275819cd7d2dd182",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/354f30cf248879b62200313b275819cd7d2dd182"
+      }
+    ]
+  },
+  {
+    "sha": "354f30cf248879b62200313b275819cd7d2dd182",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjM1NGYzMGNmMjQ4ODc5YjYyMjAwMzEzYjI3NTgxOWNkN2QyZGQxODI=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:14:26Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-02-01T00:14:26Z"
+      },
+      "message": "feat(dark mode toggle): add color mode toggle to header",
+      "tree": {
+        "sha": "a2774b97571e3c2fef18b497bc1f177a4a1dbd2a",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/a2774b97571e3c2fef18b497bc1f177a4a1dbd2a"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/354f30cf248879b62200313b275819cd7d2dd182",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAXR+IACgkQpP3Dvzdk\nDwzJnA/+ISCuAmVoiXZQ1yTGOt4qboduCXsAWRYHo41iqJwWXyhXHsqaRpftVdzL\n405tXk1Wl2WtLh2zHFGcVcIs7PlxkjoUpec22eKDJZvFxqGWkT+f9xdDdo0NKoge\nMMUYJzuw/FmNZco+6v6eDqUvLLqXBSjXFUWJFsXegowkYaMsFqVjiZRvSmiyMzyf\nEi2XIbLONHvXtuyFu4pwNMaPbCH1GeICC2V7EKriHnGwpaLscg4fVSRdjZpNTKTP\nXg4+IaTjhuCyzF9Oqq3zQFAGmX1jNPsDZLVMVrqIxp3+gBFGtT+e1nqXPdZ4XwLk\n2XCykNl8JyNID12CPivJKmB4gw5COBA6vZn6G7PN9ElLxpw0i+xTLhf3F8vLuqXM\nJcEGZXnBrYWdoyfplJisgbbpo0qjqRd6h8Bhe5/kLxDz8czOxWRtRw44NrKseVfE\n6fwtBXCswRnavK8nI7mRfLw8LmWDO8GBIgqsbwnWeF5L5Kiwh1lmI7S3EFm73NNW\nJM6b7jmjkRq4wkDBnrjZCTojBxwNkdMxAbWG2nqnzVdyU++oxyIgMARkmy5+9ADz\nolnAYnkL+gjUQeO+TEoBfOXkTjo2/on2vtqLugAx9IP5l1naY415WWBFrSIl9yAv\nHc5yRQ9d8BdIDuWkVFkvz9BdOgYp24ocgcdb8NRw06ZPVej7vp0=\n=yupN\n-----END PGP SIGNATURE-----",
+        "payload": "tree a2774b97571e3c2fef18b497bc1f177a4a1dbd2a\nparent 24c2182e7dd51df1eb74166341bb5db1c2a17fb0\nauthor dcwds <dcwds@protonmail.com> 1612138466 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612138466 -0500\n\nfeat(dark mode toggle): add color mode toggle to header\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/354f30cf248879b62200313b275819cd7d2dd182",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/354f30cf248879b62200313b275819cd7d2dd182",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/354f30cf248879b62200313b275819cd7d2dd182/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "24c2182e7dd51df1eb74166341bb5db1c2a17fb0",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/24c2182e7dd51df1eb74166341bb5db1c2a17fb0",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/24c2182e7dd51df1eb74166341bb5db1c2a17fb0"
+      }
+    ]
+  },
+  {
+    "sha": "24c2182e7dd51df1eb74166341bb5db1c2a17fb0",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjI0YzIxODJlN2RkNTFkZjFlYjc0MTY2MzQxYmI1ZGIxYzJhMTdmYjA=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T17:12:30Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T17:12:30Z"
+      },
+      "message": "chore(header, contact): add nav items and contact section",
+      "tree": {
+        "sha": "6a45c926833ea807c783a692f851903e7554e1a6",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/6a45c926833ea807c783a692f851903e7554e1a6"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/24c2182e7dd51df1eb74166341bb5db1c2a17fb0",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAW5P4ACgkQpP3Dvzdk\nDwwHtBAAg514Q26U/e+uCdLMVnBasgrs8FH3Wpe0RT5xfNcAq9FpwVrMkbWpFc3G\nef117dKcWLV6EBQa11Ijf16ZaQF/1wsXmgYDSRGNLv+auq/RePF8u2OOGC/K418b\nGssV6uq7/nWf4d3pc/O4K4JOjzEnytHJmUxu5pgqhNcdsICuY7Z81FnuO2fLr3GO\noeC0ZKzwtI/r8kikO1MOtvn0WXnv1D08Mi+kUd/FBhQ78bj7d3jAcljxPU6+UvM/\ni8m6ZWXa2+CFmh6fV3RujX9DAB98DH+ecLskl4nulsw9knH+O4K1goLm3pYvJ/Y+\n7ovgqUgubLvgovTKRtVfYPfEazlhB4aHZ+inOBKZWDn5c4+ImZ7EQVPUpWG7f2OX\nKO8TXsFduYe+EePbwXbOGcSFFujnZYTT8p8Fv1nweDB8P63u2519YV034LQ5ltcN\nVIHEseGW7xeQQA0VmQwcUbaVVFrQ+zD02Rsu16BFcZyBDXDiVEjc4sAnM/gEQ+fM\nADzeEahOoimQiAYUvn9wIW/dDUa6Nv/eYbaGG8Ugge8LveQHIjw4BGl3haZzio/6\nxgnbL7O66kEH/EqgsQsMAWDwH47FxXHJ9FAwgyLQvIWXzdI1zmD/Sq1+hEW0Ra2I\nflFKOjm22ah7K6/4wtPwk1htqvIki+VKov8h43CqFkX9D9olLHw=\n=et2i\n-----END PGP SIGNATURE-----",
+        "payload": "tree 6a45c926833ea807c783a692f851903e7554e1a6\nparent d40078d0d99b47d6b27b82aa0af5581823d05b71\nauthor dcwds <dcwds@protonmail.com> 1612113150 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612113150 -0500\n\nchore(header, contact): add nav items and contact section\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/24c2182e7dd51df1eb74166341bb5db1c2a17fb0",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/24c2182e7dd51df1eb74166341bb5db1c2a17fb0",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/24c2182e7dd51df1eb74166341bb5db1c2a17fb0/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d40078d0d99b47d6b27b82aa0af5581823d05b71",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d40078d0d99b47d6b27b82aa0af5581823d05b71",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/d40078d0d99b47d6b27b82aa0af5581823d05b71"
+      }
+    ]
+  },
+  {
+    "sha": "d40078d0d99b47d6b27b82aa0af5581823d05b71",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmQ0MDA3OGQwZDk5YjQ3ZDZiMjdiODJhYTBhZjU1ODE4MjNkMDViNzE=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T06:42:55Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T06:42:55Z"
+      },
+      "message": "chore(organization): make components from index page sections",
+      "tree": {
+        "sha": "5529c0c1c77b9547c62561ba929ef8ffe6334503",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/5529c0c1c77b9547c62561ba929ef8ffe6334503"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/d40078d0d99b47d6b27b82aa0af5581823d05b71",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAWUW8ACgkQpP3Dvzdk\nDwxNTA//V9iKDW3js2Naq6xzcCJb0UQlsp0G6mo+onkxUMWVXL33givQ31tc9cLW\n0wPYR8xJUbvJYMJsJirUYbN2ScbPTojWGEvSMRZ7tj/D3zP9uJC+DiPyAi7JbYGV\nI+0HSK1kExhebZ8ADvqsW6KAl+/vwHyR+VXseXjmQ40aXaNEYqA8IBGka/Ewyd4y\ngBToQlT00eKVX8jHhtHByMa2g86tOgxXfLWvWqttMNwyZ1kOh9udZ/bNnEkyHX1N\nCAk6SoDrTvnjHX5vjsLgH7ykiIu4ONO99TKU9eFDYjYxS1hAOkVc3jZK3gwMpQGY\nyJ7OpAtuc3G0Vun3VdzEjHR2K8eqXXzexOkhosq0G9LShR7T/1I6DdCUTLLnqtjU\nBW6mq1bzenq0zkbquqgyafDUesWtCkF5i/NeAJi0XiOEYSep7kwvbvBVIyfmgFOE\nozOHHHccpzh0moq/Vx/DAB0d8pWLSN7fpUEieriGOdwZIsu6Oc2UYvz3DvLMqK1A\neI2fe0f+l2d8nDFdII02CykiKtyjCMrrZ/gNsIfMJsuYmGCbnHUNOwshmbx3a/v8\neB4smXkyz4bqZUWKdeWNYT2+5vb2TEma6PqrXV0pDha6XZc+zBNXNYt5UIMWLKt8\n0houqPP1EIGHLGRtV7dFsTyLx5KE9CRdn3c7lywicoI88QLyqe0=\n=nnWP\n-----END PGP SIGNATURE-----",
+        "payload": "tree 5529c0c1c77b9547c62561ba929ef8ffe6334503\nparent de14c484fdff77f3170b24311f510d99ccdb6956\nauthor dcwds <dcwds@protonmail.com> 1612075375 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612075375 -0500\n\nchore(organization): make components from index page sections\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d40078d0d99b47d6b27b82aa0af5581823d05b71",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/d40078d0d99b47d6b27b82aa0af5581823d05b71",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d40078d0d99b47d6b27b82aa0af5581823d05b71/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "de14c484fdff77f3170b24311f510d99ccdb6956",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/de14c484fdff77f3170b24311f510d99ccdb6956",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/de14c484fdff77f3170b24311f510d99ccdb6956"
+      }
+    ]
+  },
+  {
+    "sha": "de14c484fdff77f3170b24311f510d99ccdb6956",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmRlMTRjNDg0ZmRmZjc3ZjMxNzBiMjQzMTFmNTEwZDk5Y2NkYjY5NTY=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T01:15:16Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T01:15:16Z"
+      },
+      "message": "chore(config): add siteUrl so prevent build error",
+      "tree": {
+        "sha": "e8b40b9a0b65f7be574c7b8d18b20162aa4821b8",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/e8b40b9a0b65f7be574c7b8d18b20162aa4821b8"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/de14c484fdff77f3170b24311f510d99ccdb6956",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAWBKQACgkQpP3Dvzdk\nDwwgdhAAqNndglol7vLcOVJ7AGlhT+P0rlMokKOXvW2US5C8evTC2vMzsFw4vB0p\nvUG8SL6KQSqZAlH+HPD/QRJIUDGEP3ScAV7MxqJYmrBrZs/Ixju8HaYP6JOzVsb6\nC28dPFAb2t5+AP0vke/a22Sxu6LxjnGJEAvGXK1c8sMFAHiWAP7LZsbiy34sLOvx\nZQbucnq98AdNunJboO8lFK6OXGqK4tFBgFT0ORchcBM3g8hEDBVS7fDDivsebgRy\nbV+z8byJoNVlpEQxBc7a3E6VEFgDPCC77IhK85xn91r/QQQXDNjQNhUkEcSNPTy3\nvo7Hx/u6gaYoz7FSB8dF3DuClIdd8lSlWmqQuSjVdxgNuqRdrvGEFRuM5Vdob4aa\nvozohWuWbBqnbGChpQMqQzF05hf6GKVllE+NUE6DA8eqsseeBeaxQPwFEn5TnHoV\nHahjfyp0Yuc9KVSC48S6dqDZ+rBlk0UOIzn47ach90tXju3N83ilWOuiDzIbcsFJ\nfu421/P/LGx8z6c/C2zUwlmVrlnJmlqYubCaT0lrpcsJZFFJQVuEnbk2aPPK4VN1\n278/PQ3B8QHPlZUjtZeeP+rdVz8fvZheXSpHry0SmHXkcm0mJ4bjSPet7oyAJ1cL\nxJd2N+0Lhbm4wGcK8a2BdTD47ddyv6gymuw6anhPCLqJwdtY9iU=\n=CKX8\n-----END PGP SIGNATURE-----",
+        "payload": "tree e8b40b9a0b65f7be574c7b8d18b20162aa4821b8\nparent 8b2607d52476b955230a66152676f2ce20332035\nauthor dcwds <dcwds@protonmail.com> 1612055716 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612055716 -0500\n\nchore(config): add siteUrl so prevent build error\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/de14c484fdff77f3170b24311f510d99ccdb6956",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/de14c484fdff77f3170b24311f510d99ccdb6956",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/de14c484fdff77f3170b24311f510d99ccdb6956/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8b2607d52476b955230a66152676f2ce20332035",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/8b2607d52476b955230a66152676f2ce20332035",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/8b2607d52476b955230a66152676f2ce20332035"
+      }
+    ]
+  },
+  {
+    "sha": "8b2607d52476b955230a66152676f2ce20332035",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjhiMjYwN2Q1MjQ3NmI5NTUyMzBhNjYxNTI2NzZmMmNlMjAzMzIwMzU=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T01:12:09Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T01:12:09Z"
+      },
+      "message": "chore(robots.txt): use Gatsby plugin and disallow crawling",
+      "tree": {
+        "sha": "99dc51c24772f9bb618d0846ba7af6a35d835ba1",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/99dc51c24772f9bb618d0846ba7af6a35d835ba1"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/8b2607d52476b955230a66152676f2ce20332035",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAWA+kACgkQpP3Dvzdk\nDwwUvw//f+3sRs+/yAgqGgEXR4AH8bM5fDvVWhcPlIW5OypSITrvegNQ2RHXNu3Z\nQVzPhpOC/IlkXxc4mhXZM8eoppvEBki3NQRFGGj2dx0jitKAu/mrazLJQcZiFcta\nYmXp7mpsJhVabkpAqVMHd8Nc33NaL+SjyXx2yQgSzErb4JlUXzvc5igpTeosIYlG\nVV/C7cgc7AXZmT63UCeIHR4OMc36IRAmo0tVWDljK79Id+pAOHZvS9dtm271Nk1q\nXtTDaakY+8nFDk4t5KwliBJWpW0l83GQedZRnzC512CChtahRxClZ5jhsWV0zaEU\nh/4DaLFZXm/l49p7CUa7um7ceA/ymuj5aap2frKVABZgdMIuY0xjpR5dnoFv76NI\nHFce+WMO3aM/+fhPSRZPf+1vMtjyrgx316VTJ4FB6+cgnEmfZi5Sr7epiyM4iiz0\n1NlGVyDa9EMCeYiabc5pXKvj/EgRUEMSTNBhAWzqcLiwk9o5HF7/QMOPlSrZGeyH\nQJ8G9sVjyXUERJqAEeakUm57H8rk3OwrZf0Kn3Xxwr92oHzcKTDzOD834ARfa3ZA\nXZkb/Yy73Z8GBHQReKkLaLl5VJDK+5B1WrYWmW2XR0b3+lkQ8X36PmhJITOk4e1h\nloNGSTEn+bCGMQHCXme4ecZxgwIJrNMZ+Uo/b0ZBWhmT6e3rYt4=\n=3H96\n-----END PGP SIGNATURE-----",
+        "payload": "tree 99dc51c24772f9bb618d0846ba7af6a35d835ba1\nparent d6172fcd6b346811e1d59f00dafb3d001954289b\nauthor dcwds <dcwds@protonmail.com> 1612055529 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612055529 -0500\n\nchore(robots.txt): use Gatsby plugin and disallow crawling\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/8b2607d52476b955230a66152676f2ce20332035",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/8b2607d52476b955230a66152676f2ce20332035",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/8b2607d52476b955230a66152676f2ce20332035/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d6172fcd6b346811e1d59f00dafb3d001954289b",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d6172fcd6b346811e1d59f00dafb3d001954289b",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/d6172fcd6b346811e1d59f00dafb3d001954289b"
+      }
+    ]
+  },
+  {
+    "sha": "d6172fcd6b346811e1d59f00dafb3d001954289b",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmQ2MTcyZmNkNmIzNDY4MTFlMWQ1OWYwMGRhZmIzZDAwMTk1NDI4OWI=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T01:04:31Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T01:04:31Z"
+      },
+      "message": "chore(gatsby): convert to Gatsby and resolve conflicts",
+      "tree": {
+        "sha": "f5fd32fe77e9a96e6f355bdec6b2235492013f09",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/f5fd32fe77e9a96e6f355bdec6b2235492013f09"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/d6172fcd6b346811e1d59f00dafb3d001954289b",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAWAh8ACgkQpP3Dvzdk\nDwzS4Q/9EpV14AosnRKp7wEDuE1ZZK9T8uPJNsahBX06JHToBgiWzTa2SRyLSdxT\nHPgdLLkSGFSOp5m5O9/ve2YqAnRZDT8I22UcfkqHShIW9zfqCcoglBxXx3kiSWc/\nKb1rOHcIrQLGrI89aZ+LvQIaUfqKTM1oWFfzGeQdWy91dX2HKhNmVPDtX5SnaQZ9\nayj1/SyVIlECNRbTT1fW+yZOu8dUxUAyU5dGgJEehKL0qNeFNv4sGzCBjW2gy9WA\n6D/n9r8HapvX0FPo1qKRiJV/rVFae9ZtRwbufd3/ccRsOePkLzZwXYH9ZZFY+0Hr\nEbWr9rmCR/0w2eXROnxdka1T4JZDOpEfBwV+QelHDw3rYL5IIBH7JVpx/mxYE2Q0\nFseUmbx5xVv9nkbOyrjws/+8k+jsLSO3GFOG1ts5IHhS2Luq+NfWwVGt3+rUdVWR\nWlFK/gsJSX6EFTHcla1lA9JRh3/AtwetZKHsgU9V1Uky96/rHI6TWV8N7+716dDC\n90eeGSE+i7fqivDoEmpQCAT7hDH3I9ErTBPge2LCFaCBGu8eUwZPXNUdLfQIeKNf\nAwlhuwDmKLv/etnVb1bT53O3LAU2l2FxL/+VckiKCHuDKWpOOUB9eID5fbqh3X03\ny22pEzhXV23b0ar11Ankh/F6Pfir/qSjye7jaBYpF7HNgLLXVtg=\n=CO8o\n-----END PGP SIGNATURE-----",
+        "payload": "tree f5fd32fe77e9a96e6f355bdec6b2235492013f09\nparent e282ff88d0c7c7afd8f479ba76859a529e56fae9\nparent 2d147d4151e896123bc50fd382d3faaa5466431c\nauthor dcwds <dcwds@protonmail.com> 1612055071 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612055071 -0500\n\nchore(gatsby): convert to Gatsby and resolve conflicts\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d6172fcd6b346811e1d59f00dafb3d001954289b",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/d6172fcd6b346811e1d59f00dafb3d001954289b",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d6172fcd6b346811e1d59f00dafb3d001954289b/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e282ff88d0c7c7afd8f479ba76859a529e56fae9",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e282ff88d0c7c7afd8f479ba76859a529e56fae9",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/e282ff88d0c7c7afd8f479ba76859a529e56fae9"
+      },
+      {
+        "sha": "2d147d4151e896123bc50fd382d3faaa5466431c",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/2d147d4151e896123bc50fd382d3faaa5466431c",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/2d147d4151e896123bc50fd382d3faaa5466431c"
+      }
+    ]
+  },
+  {
+    "sha": "e282ff88d0c7c7afd8f479ba76859a529e56fae9",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmUyODJmZjg4ZDBjN2M3YWZkOGY0NzliYTc2ODU5YTUyOWU1NmZhZTk=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T00:55:47Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T00:55:47Z"
+      },
+      "message": "styles(content): add about section, more styles",
+      "tree": {
+        "sha": "45ad80bb3abe8da67f1b185731dbecad53c5ef9f",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/45ad80bb3abe8da67f1b185731dbecad53c5ef9f"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/e282ff88d0c7c7afd8f479ba76859a529e56fae9",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAWABMACgkQpP3Dvzdk\nDwy7Lw//ZsSkiR1UPcnX/idjohv1V8Jm6cqWsorTPqBY6NLWjBAzo+etL8ZiPq2O\n/xqjNZh7glltPtdLXuNBx4aPh2bS5gH/n0SATJDBtFsxtTn2qmPRe4fA/yswmHcr\ncp3ACk0BCMccI1l3lqhSccNszp1oYj2+waZGxk3UleGgPIVHUXWwUoNe2ZpL29N5\nrXkCTte7hM0noHFIfvkKgBd8mteyEPgc56S4N/zVMJvqEpJ+dGm20KamGjulbkoZ\nD2vdWsfSzk0/FZYJIzJ/b8lqNMyHu3jfD5Nbi5exBLrwbzJbDEHAMXe7iXZ6lIcX\nQOxrgt7SRmRhLTNfLHDicVTR+KC5fVXTJtysRO2DLx+KJgaO/rZCXOZ30mQy/wIq\nsMmHAFjHeKMhFLGrHerW3X9VUqRBy5b7OtHROj4TByv+n2aaxBrQN75IeelqNcra\nvZR63146tx4yJVhTHlu6BbVekkutTxcUGMp3xccp+tFqUpMFwkHryC/mv1hVUzV0\nKk7B26+5G0+wGGyYFcVt7wrafaxaSMN8PepPCnWecsuBy45K8Vu0DFyjm2cXjAfu\nWVbtKdtyyQwZrTT77D9WdwpNgKxmPyluQr6y73PT1sQAraStuCQnD+IdDtR8s4wt\nQ7ThQ64wZh+fy3RKte/ipSPKH8Vn4wXgOwF+ZnWGkyH/a1UYsGg=\n=mSVr\n-----END PGP SIGNATURE-----",
+        "payload": "tree 45ad80bb3abe8da67f1b185731dbecad53c5ef9f\nparent 30ab8c9f240d76edbadc70088dcd213fb7100af8\nauthor dcwds <dcwds@protonmail.com> 1612054547 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612054547 -0500\n\nstyles(content): add about section, more styles\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e282ff88d0c7c7afd8f479ba76859a529e56fae9",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/e282ff88d0c7c7afd8f479ba76859a529e56fae9",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/e282ff88d0c7c7afd8f479ba76859a529e56fae9/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "30ab8c9f240d76edbadc70088dcd213fb7100af8",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/30ab8c9f240d76edbadc70088dcd213fb7100af8",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/30ab8c9f240d76edbadc70088dcd213fb7100af8"
+      }
+    ]
+  },
+  {
+    "sha": "2d147d4151e896123bc50fd382d3faaa5466431c",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjJkMTQ3ZDQxNTFlODk2MTIzYmM1MGZkMzgyZDNmYWFhNTQ2NjQzMWM=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T00:39:52Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T00:39:52Z"
+      },
+      "message": "chore(gatsby): convert project to Gatsby from CRA.",
+      "tree": {
+        "sha": "81500b6f046714132b129c66bee5a1992e2696bb",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/81500b6f046714132b129c66bee5a1992e2696bb"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/2d147d4151e896123bc50fd382d3faaa5466431c",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAV/FgACgkQpP3Dvzdk\nDwzIJQ//XtLsITrfjTx+8bPLLOIcpAMrM/F7I5QrayyUyLTTfkwpVSNDeE+QjzAA\nSanB0qM9Ri6aGXQ12hoxrx4HaJpIQnnTYoe8xNah1X8fQBPKmGX0MIsGrjNg2eGZ\nUdSWncfCGoq89HJl5VmH5U6uUNYBrXjKi+NsGc6H+4MIgh+GSSzSrvHCbUnZyQZa\nL14cr9P0PP5XY0l8GleVABdJCOn6ta3m3tULzfvJ0D/1OVUanePTuIXQKe5wuVze\nvS7V6MabmH40xywUajQkyN8CxysjNXZgF/XaPV4RybLsqazlDQBdkpF8U6o+9Ilk\ncCOPfGsZpkZItHpAoyDpFY2oiGFgkSZiRwbsIPXMrR1SoR324OqRUwRm3RyqdNb4\nEjD49q44GFhuA4Anr+n4LPkYPRVebK7NSPgbu6uTSHFjSK1b3nrx0RyWzy23zkHP\nroap7exzz/dF/AfwKzlLLBkCLpM28ubvQwO/SiwYuqIqgT6+y7lGiwXJXo5Zxpt/\nMike8+84oMGfJkD3VToDWgzlTHY/nOFswkouF/mm3CriTqSUrHocwa1Mkf1otdjX\nqUrduyIrQLw8AsV+ua4QPQIxpRpIAWcFd8GUlBjhIbVC0Y4DeLpUSVBLvHlmyWUi\nXB7A0sEQVtbyWbYTf9il3DfxUrq3jTbU6kOKQkInSDU6JP7+6j4=\n=l7r7\n-----END PGP SIGNATURE-----",
+        "payload": "tree 81500b6f046714132b129c66bee5a1992e2696bb\nparent 05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3\nauthor dcwds <dcwds@protonmail.com> 1612053592 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612053592 -0500\n\nchore(gatsby): convert project to Gatsby from CRA.\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/2d147d4151e896123bc50fd382d3faaa5466431c",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/2d147d4151e896123bc50fd382d3faaa5466431c",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/2d147d4151e896123bc50fd382d3faaa5466431c/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3"
+      }
+    ]
+  },
+  {
+    "sha": "05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjA1ZGJmZmY5ZTNjODJiNmFiODE4YzVlZDcwOGFiMTRkYzZlMjZiZTM=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T00:14:24Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-31T00:14:24Z"
+      },
+      "message": "Initial commit from gatsby",
+      "tree": {
+        "sha": "be03f3a9c30f0bfce1e4e870e7cefd70fdedc91b",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/be03f3a9c30f0bfce1e4e870e7cefd70fdedc91b"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAV9mAACgkQpP3Dvzdk\nDwwHTA//Va2Vp/2pX/rk5Uea0OqcUA7kfn9NT/vD5Yppc4f86Mj8glAKpbU70bAR\n+Loh6COIrn+gAyUupIaaolHHIg8EWiU9hj62tkZGaXRM6e8j8PxwP24eqQgH6UEH\nJY86DpwAyAnfkbQCUUqsTG7rBA3qAGhsdG8ySOSe22RT/7f90Gfmu5pshbCc9Bng\n4z9BYL4zdh2f7bU/RFfQPI0x/h+ix7PJzawBIr0VaSggdL7GX2rZ+Npw9wxFHnXS\nrVjtd3dxoChU0lHpm3A6HOUrKgp+hIb0Q+lWeCz16pB+f1FspdNFOJdRojbqCkYi\ni9oPkRsjcOnIF6xUUpsbetkPvRWukssXrq1iqdvqnZPJMrQpDovbMGeDdHaomUiI\nJxEHN3UxEgr9Txqa7kq6tjsPiqKHf5zhvzmH/kWV4XjkmJ2+xJnJ3RpqvvztsfJk\nrPXwj5QT+HC0gWVNqcC6Sp8RSZIRZqnMAWjwYUmGBu1Z0vj85IJaA0qO+G2FdtRW\nn1/Xb3NEhpvw4URCpRhjjcDbQe6Da532M1wbB4SPA/2YlgvvXWa5R1dwUpbk6MoY\nxNuoi8iMjC7xKqG4oLQoNx3/gYAHe/ntI3yFW1wftNpIbu3/Y5rzTYRXkADuGOTl\nWkV+k3cIRP5azp2bz5T5scG3xr0VuHECb29FjQt6Vawj39fO7Dk=\n=sZa3\n-----END PGP SIGNATURE-----",
+        "payload": "tree be03f3a9c30f0bfce1e4e870e7cefd70fdedc91b\nauthor dcwds <dcwds@protonmail.com> 1612052064 -0500\ncommitter dcwds <dcwds@protonmail.com> 1612052064 -0500\n\nInitial commit from gatsby\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/05dbfff9e3c82b6ab818c5ed708ab14dc6e26be3/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+
+    ]
+  },
+  {
+    "sha": "30ab8c9f240d76edbadc70088dcd213fb7100af8",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjMwYWI4YzlmMjQwZDc2ZWRiYWRjNzAwODhkY2QyMTNmYjcxMDBhZjg=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-30T05:29:38Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-30T05:29:38Z"
+      },
+      "message": "chore(content): add callout, projects, and basic header",
+      "tree": {
+        "sha": "ca759fffbae4bfa6cf041f1e2421c8a299c87103",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/ca759fffbae4bfa6cf041f1e2421c8a299c87103"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/30ab8c9f240d76edbadc70088dcd213fb7100af8",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAU7sIACgkQpP3Dvzdk\nDwxmzg//QhuTjdOan0gSLmcpbYEXu97hTz/ZyZeYWcKviT2g2FZjN9zLJq9dt9k2\nf4w44NPtWMDrP+veN3gkd4jTT9IUCAW4KcM2cMiR4wE9fyhT7N7D1NSwfN2WhbF2\n4BmkrJNtLao2eXQwi9NfAD3EPORlxNWln4btraIY47B3TYPQXh5vXl2Zh9Lrsw7P\nO7va9les0ZWSepf13wUQPUaUzOZRUP9l0k96PsEz4DsuugmXyDoKli8h6Gc7sCgN\nq1MasO4dADiHYfdyKlAicQD4wi1NOsJSiSG4f8eEOhfPUdZT9y7MQjI0gxkB6LSW\noIDIOtPMLTZ+QHcPNjge03za1FYxypn1YM/Rt6ro7qiiR+QYeILrJtjyo1yii0pz\nqbqXykHeQq9gZVmJsZ4l4DgUTm1Ily42t1nFpiusB1fdig4uXHMtVLSP1+lMcI0O\nIajQp+OCaFvmog4BU+0pdnmefllM9qJx+sm1fjzJAawWufaS7vthEaZFaNdvg+6P\niIUjSm2pVz6xcWUufMC0fzisBl2L4I+CUj9OgnnD4DAnKaeihBHAxP/gyfh8Dk6R\nFZCROt90lVLSdFTWL62ABOTYzoPVAN1qA/hunuJPsZWSs5f7Yj+vMbZj9096gd6I\n3npZu0hCT8vZFV43JSueqeTF9iXVQHklBrQoOnz8g50dMWQxzuo=\n=C7di\n-----END PGP SIGNATURE-----",
+        "payload": "tree ca759fffbae4bfa6cf041f1e2421c8a299c87103\nparent 7ac3866859aee64e5027222e5b7e5af4a03b7b5a\nauthor dcwds <dcwds@protonmail.com> 1611984578 -0500\ncommitter dcwds <dcwds@protonmail.com> 1611984578 -0500\n\nchore(content): add callout, projects, and basic header\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/30ab8c9f240d76edbadc70088dcd213fb7100af8",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/30ab8c9f240d76edbadc70088dcd213fb7100af8",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/30ab8c9f240d76edbadc70088dcd213fb7100af8/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7ac3866859aee64e5027222e5b7e5af4a03b7b5a",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/7ac3866859aee64e5027222e5b7e5af4a03b7b5a",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/7ac3866859aee64e5027222e5b7e5af4a03b7b5a"
+      }
+    ]
+  },
+  {
+    "sha": "7ac3866859aee64e5027222e5b7e5af4a03b7b5a",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOjdhYzM4NjY4NTlhZWU2NGU1MDI3MjIyZTViN2U1YWY0YTAzYjdiNWE=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-30T04:03:54Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-30T04:03:54Z"
+      },
+      "message": "chore(tailwind): configurations",
+      "tree": {
+        "sha": "29322858d7dff131ed6b7b7511e5074791c0560a",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/29322858d7dff131ed6b7b7511e5074791c0560a"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/7ac3866859aee64e5027222e5b7e5af4a03b7b5a",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAU2qoACgkQpP3Dvzdk\nDwy86Q/9Hk1WCEYRLAOTGyQCU7yxJIxbnFW6fgJwvRVuJ2FcGyHTXxNHhK0z/yAR\naFfsl58ipZZSMpd5PkLJVDj0WmyhVW6Bin9TUQp/UTNJ9pW1hL7e/f/4JVEgHQlr\nFTHGMOt0u0z/97HfTEy0Abl1UCbiV1s9JHR/jePnzxA/Tm+bH6TIbefgQTOK3/Tg\nrEds847Wv5bM1h900CEkKSb0nMWTnVLwvedOGvp61yVC6FhLyIVi8WsTvaqqcKb6\nmNQLdcjnT8V0qoUK7rDpvkwNcxYbq1mB7asRg0h+3His+X4Drk7816b0riRwLaO9\nJDElOUJuSDjRLhnN5OYDI8V3p9hgFFrEty8rZ6Q5ZZ9JHzN2YHGo7ew8naMTnW9E\nx6tnCvCdcjZF3VJIANEHkdoC+9manzfcsGyyZzYp7mN1ayqUMMxMxKQLCwpjJ9Sm\nmW9qwTf/8fRTwYMj2WrQTmQRLtvIGGWgN9H2NiOk2MMwKwvxKXDcB/dTII9WOn4M\nkfq2CSGfwzJlgtQHEPCXa9KlRDbeEyp16XCVGDU8Fh5W60Rd5W+hpdIkMQpikGCK\n1iU3cWHAIVHQhaNHwMxAHYPSpeyf6j22MEOhFsVZ3NOhqf8ilZdSnaWigmWSAQ/F\n1WoqKmiVhnUD6ZC6JhHACyQy6WpQkzWYoMLmKnuJlMKWi2/CDp4=\n=xGJt\n-----END PGP SIGNATURE-----",
+        "payload": "tree 29322858d7dff131ed6b7b7511e5074791c0560a\nparent ec8a17220e79ca512c23cee0c012b2a17b7eb1fe\nauthor dcwds <dcwds@protonmail.com> 1611979434 -0500\ncommitter dcwds <dcwds@protonmail.com> 1611979434 -0500\n\nchore(tailwind): configurations\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/7ac3866859aee64e5027222e5b7e5af4a03b7b5a",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/7ac3866859aee64e5027222e5b7e5af4a03b7b5a",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/7ac3866859aee64e5027222e5b7e5af4a03b7b5a/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ec8a17220e79ca512c23cee0c012b2a17b7eb1fe",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/ec8a17220e79ca512c23cee0c012b2a17b7eb1fe",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/ec8a17220e79ca512c23cee0c012b2a17b7eb1fe"
+      }
+    ]
+  },
+  {
+    "sha": "ec8a17220e79ca512c23cee0c012b2a17b7eb1fe",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmVjOGExNzIyMGU3OWNhNTEyYzIzY2VlMGMwMTJiMmExN2I3ZWIxZmU=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-29T21:25:04Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-29T21:25:04Z"
+      },
+      "message": "chore(robots.txt): block crawlers",
+      "tree": {
+        "sha": "d4d842ff9dc21348680a628bf7554f6664ca82da",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/d4d842ff9dc21348680a628bf7554f6664ca82da"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/ec8a17220e79ca512c23cee0c012b2a17b7eb1fe",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAUfTAACgkQpP3Dvzdk\nDwww0Q/+Out+lWKkh0WY1qeL5i3hJtrDDP6p0dAstXaINnQvZr8A19htZpjlexT9\nYLiePogMnXmbfKZfbDB6o1r+/9BYJz7Ywyh8np+rRksa6Pdu3WbpoqX3B5CPhMe/\nX7fA5o+tfMPnP8Ciq30qr5hPEn7eRvUKkQenqoujzrPgMGNL9auKJxKjCywQ7ASE\nDwD7KlQlWjkBdZ2OxjUL1VvbEKRDq6UxA79h04ML1gk1asHUIHnn0IK3ghGOLUK3\nL5JNTTi/CImoXwizCqMlCl+xrgUkdlXeE9SwX6kf+//+A9/RLmEz4yxBjD4y5KVz\ny6SygMoPD9Q1cw0o1EQjRqm1x0Mda1XsVh87NcVP0tu4/7Upwn3UMXbu1AcAq6zq\nAxewPReJxwt6JgJgSCZ7BUzU9JT0rDT6XdRq87PlLV9oMsYhEigtdMuqs+rwo9R8\nYLGQxbE8zwGEGVIM8QcXXgyAnp+2FYkJVjiCUCwFa8OM8qmQ45XcwNanN+UAXugN\njzTjSe3p2DScEgpQCnMKw6occ2fTw8fSta7iXn2lUSt/a22dtWaCcJu1/6W65Rns\nTm2MQjOBAT7RP+zE9FxIJ1WJuBGEs+fMlfSjHI/NQ6EKkRBzSc2HvkMLUhYeewAy\n1JmS4Vz8NukD+QF7A5Q9NM6snYzgkdGE1DiSIW74i6Xd/e41Bmg=\n=XqIt\n-----END PGP SIGNATURE-----",
+        "payload": "tree d4d842ff9dc21348680a628bf7554f6664ca82da\nparent d1a61269f4b35302e335c44154fce475ef6901ff\nauthor dcwds <dcwds@protonmail.com> 1611955504 -0500\ncommitter dcwds <dcwds@protonmail.com> 1611955504 -0500\n\nchore(robots.txt): block crawlers\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/ec8a17220e79ca512c23cee0c012b2a17b7eb1fe",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/ec8a17220e79ca512c23cee0c012b2a17b7eb1fe",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/ec8a17220e79ca512c23cee0c012b2a17b7eb1fe/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d1a61269f4b35302e335c44154fce475ef6901ff",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d1a61269f4b35302e335c44154fce475ef6901ff",
+        "html_url": "https://github.com/dcwds/dcwds.co/commit/d1a61269f4b35302e335c44154fce475ef6901ff"
+      }
+    ]
+  },
+  {
+    "sha": "d1a61269f4b35302e335c44154fce475ef6901ff",
+    "node_id": "MDY6Q29tbWl0MzM0MjY5MzYxOmQxYTYxMjY5ZjRiMzUzMDJlMzM1YzQ0MTU0ZmNlNDc1ZWY2OTAxZmY=",
+    "commit": {
+      "author": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-29T21:20:26Z"
+      },
+      "committer": {
+        "name": "dcwds",
+        "email": "dcwds@protonmail.com",
+        "date": "2021-01-29T21:20:26Z"
+      },
+      "message": "Initialize project using Create React App",
+      "tree": {
+        "sha": "b248c651b46b86ee5e61e9f2f2a7c910410675a3",
+        "url": "https://api.github.com/repos/dcwds/dcwds.co/git/trees/b248c651b46b86ee5e61e9f2f2a7c910410675a3"
+      },
+      "url": "https://api.github.com/repos/dcwds/dcwds.co/git/commits/d1a61269f4b35302e335c44154fce475ef6901ff",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEE2rBRuerxMuS0SWbHpP3DvzdkDwwFAmAUfBoACgkQpP3Dvzdk\nDwwUvw/7Bl2Hx02YloOmniKTRSQDOjbCHsCN7qg19UHKfWgVvCPhyq8T+gj72142\nlBdRaf2DdOSTkZc+8fHE0hlnWZMb4T3AkTn5vXStyAsDSXEO3tICUItBkcKuYkah\nHECjV4cKpPWXEj7+Fuuu+TKpKeWj9ti/ItNU7L/dN2bkXCBdc7MkACpwlagCjknp\nr0FBpFP8fPjZNnDnv6n1FquqFeHOPXiklRutZt/DRiBfD/70Fhzn+j5Ov7akOatX\nOTIU5vrW8pr/F5Xi5oUL7VWQv9WwiCyq+eElJbt+hz7UE5ZsymAQSAMMgdr9k6rt\nI0av8JQmhQy5c68l6yT1Sgso84Ztq5qnkEw2LpWoG9QnjF/tqAA0yjXMVoDZyEFs\nqw08foXBKfWG0SlcOeUelVab4usiIKDkM39tcYC3siDxCaNTMM4+3cj0bCeBP0Yi\nY/YiT9AfgaY1wkbPJ9vJFdH+9T+uqpWcdCYu4ZWv71oyc/p6zSQztGc8wGU28fMd\nlahjb3NzRrkxurBqjPEJReECunGY9c2oPC9U1oW3Skgow2SRRTCX2wBDFibkid9t\nJ5ZAX9swHcXl5JsHcUWOJh8r9axOiKE0bbPS6kNrOIyYz/CP36x2pLL7YAzaoX2q\ngQsTaR2EhTAwZ/Qxvm/Jko7UEiQ4uxAt9slv5/iTWPIrx6LnvCo=\n=e7Bi\n-----END PGP SIGNATURE-----",
+        "payload": "tree b248c651b46b86ee5e61e9f2f2a7c910410675a3\nauthor dcwds <dcwds@protonmail.com> 1611955226 -0500\ncommitter dcwds <dcwds@protonmail.com> 1611955226 -0500\n\nInitialize project using Create React App\n"
+      }
+    },
+    "url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d1a61269f4b35302e335c44154fce475ef6901ff",
+    "html_url": "https://github.com/dcwds/dcwds.co/commit/d1a61269f4b35302e335c44154fce475ef6901ff",
+    "comments_url": "https://api.github.com/repos/dcwds/dcwds.co/commits/d1a61269f4b35302e335c44154fce475ef6901ff/comments",
+    "author": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dcwds",
+      "id": 1319698,
+      "node_id": "MDQ6VXNlcjEzMTk2OTg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1319698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dcwds",
+      "html_url": "https://github.com/dcwds",
+      "followers_url": "https://api.github.com/users/dcwds/followers",
+      "following_url": "https://api.github.com/users/dcwds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dcwds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dcwds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dcwds/subscriptions",
+      "organizations_url": "https://api.github.com/users/dcwds/orgs",
+      "repos_url": "https://api.github.com/users/dcwds/repos",
+      "events_url": "https://api.github.com/users/dcwds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dcwds/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+
+    ]
+  }
+]
