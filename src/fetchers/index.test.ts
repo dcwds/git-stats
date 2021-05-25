@@ -4,7 +4,7 @@ import {
   fetchGitHubUserRepos,
   fetchGitHubRepoCommits,
   fetchGitHubUserCommits,
-} from "./fetchers"
+} from "./"
 import gitHubResponses from "../mock-data/responses"
 
 describe("fetchers", () => {

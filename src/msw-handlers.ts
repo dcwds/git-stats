@@ -6,7 +6,7 @@ const handlers = [
     const { user } = req.params
 
     if (user === "invalid-user")
-      return res(ctx.status(500), ctx.json({ error: "user does not exist" }))
+      return res(ctx.status(403), ctx.json({ error: "user does not exist" }))
     return res(ctx.status(200), ctx.json(gitHubResponses.user))
   }),
   rest.get("https://api.github.com/users/:user/repos", (_, res, ctx) =>
