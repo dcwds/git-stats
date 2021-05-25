@@ -7,6 +7,7 @@ const GitHubUserSearch = () => {
   return (
     <div>
       <input
+        aria-label="search github user"
         type="text"
         placeholder="Search for a GitHub user..."
         onChange={(e) => changeGitHubUser(e)}
