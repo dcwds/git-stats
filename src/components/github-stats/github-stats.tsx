@@ -11,6 +11,7 @@ const GitHubStats = () => {
         {
           loading: <p>Fetching user data for {user}</p>,
           done: <p>{gitHubUser && gitHubUser.name} stats placeholder.</p>,
+          error: <p>Could not get stats for {user}</p>,
         }[status]
       }
     </div>

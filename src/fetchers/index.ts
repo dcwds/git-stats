@@ -13,9 +13,14 @@ export const fetchGitHubUser = async (
 ): Promise<GitHubUser> => {
   try {
     const fetchedUser = await fetch(`https://api.github.com/users/${username}`)
+
+    if (!fetchedUser.ok) {
+      throw new Error(`could not fetch data of GitHub user: ${username}`)
+    }
+
     return fetchedUser.json()
-  } catch (err) {
-    throw new Error(`Could not fetch profile of GitHub user: ${username}`)
+  } catch (error) {
+    throw error
   }
 }
 
@@ -26,9 +31,14 @@ export const fetchGitHubUserRepos = async (
 
   try {
     const fetchedRepos = await fetch(repos_url)
+
+    if (!fetchedRepos.ok) {
+      throw new Error(`could not fetch repos of GitHub user: ${username}`)
+    }
+
     return fetchedRepos.json()
-  } catch (err) {
-    throw new Error(`Could not fetch repos of GitHub user: ${username}`)
+  } catch (error) {
+    throw error
   }
 }
 
@@ -39,9 +49,14 @@ export const fetchGitHubRepoCommits = async (
 
   try {
     const fetchedCommits = await fetch(removeBracketsFromUrl(commits_url))
+
+    if (!fetchedCommits.ok) {
+      throw new Error(`could not fetch commits of GitHub repo: ${name}`)
+    }
+
     return fetchedCommits.json()
-  } catch (err) {
-    throw new Error(`Could not fetch commits of GitHub repo: ${name}`)
+  } catch (error) {
+    throw error
   }
 }
 
@@ -58,6 +73,6 @@ export const fetchGitHubUserCommits = async (
 
     return commitsByUserId(userId, fetchedAllCommits.flat())
   } catch (error) {
-    throw new Error(`Could not fetch all commits of GitHub user: ${username}`)
+    throw new Error(`could not fetch all commits of GitHub user: ${username}`)
   }
 }

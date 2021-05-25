@@ -3,13 +3,12 @@ import { GitHubUser } from "../../interfaces"
 import { fetchGitHubUser } from "../../fetchers"
 
 const useGitHubUser = (gitHubUsername: string) => {
-  const [gitHubUser, setGitHubUser] = useState<GitHubUser>()
+  const [gitHubUser, setGitHubUser] = useState<GitHubUser | null>(null)
   const [status, setStatus] = useState<string>("idle")
 
   useEffect(() => {
     setStatus("loading")
-
-    const getGitHubUser = async () => {
+    ;(async () => {
       try {
         const user = await fetchGitHubUser(gitHubUsername)
 
@@ -18,9 +17,7 @@ const useGitHubUser = (gitHubUsername: string) => {
       } catch (err) {
         setStatus("error")
       }
-    }
-
-    getGitHubUser()
+    })()
   }, [gitHubUsername])
 
   return { gitHubUser, status }

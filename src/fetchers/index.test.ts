@@ -8,15 +8,13 @@ import {
 import gitHubResponses from "../mock-data/responses"
 
 describe("fetchers", () => {
-  test("fetches data of valid github user", async () => {
-    const fetchedUser = await fetchGitHubUser("valid-user")
-    expect(fetchedUser).toEqual(gitHubResponses.user)
-  })
+  test("fetches data of valid github user", async () =>
+    expect(await fetchGitHubUser("valid-user")).toEqual(gitHubResponses.user))
 
   test("fails to fetch data of invalid github user", async () => {
-    const fetchedUser = await fetchGitHubUser("invalid-user")
-
-    expect(fetchedUser).toEqual({ error: "user does not exist" })
+    await expect(fetchGitHubUser("invalid-user")).rejects.toThrowError(
+      /could not fetch data of GitHub user: invalid-user/i
+    )
   })
 
   test("fetches repos of valid github user", async () => {
