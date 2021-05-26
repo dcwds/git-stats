@@ -9,7 +9,7 @@ const App = () => (
     </div>
     <GitHubUserSearch />
     <Switch>
-      <Route path="/stats/:user">
+      <Route path="/stats/:username">
         <GitHubStats />
       </Route>
       <Route path="/">

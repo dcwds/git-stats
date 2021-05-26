@@ -1,9 +1,8 @@
 import {
-  commitsByUserId,
   fetchGitHubUser,
   fetchGitHubUserRepos,
   fetchGitHubRepoCommits,
-  fetchGitHubUserCommits,
+  fetchGitHubUserReposAndCommits,
 } from "./"
 import gitHubResponses from "../mock-data/responses"
 
@@ -18,33 +17,24 @@ describe("fetchers", () => {
   })
 
   test("fetches repos of valid github user", async () => {
-    const fetchedUser = await fetchGitHubUser("valid-user")
-    const fetchedRepos = await fetchGitHubUserRepos(fetchedUser)
+    const repos = await fetchGitHubUserRepos("valid-user")
 
-    expect(fetchedRepos).toEqual(gitHubResponses.userRepos)
+    expect(repos).toEqual(gitHubResponses.userRepos)
   })
 
-  test("fetches commits of repo", async () => {
-    const fetchedUser = await fetchGitHubUser("valid-user")
-    const fetchedRepos = await fetchGitHubUserRepos(fetchedUser)
-    const fetchedCommits = await fetchGitHubRepoCommits(fetchedRepos[0])
+  test("fetches commits from repo of valid github user", async () => {
+    const repos = await fetchGitHubUserRepos("valid-user")
+    const commits = await fetchGitHubRepoCommits("valid-user", repos[0].name)
 
-    expect(fetchedCommits).toEqual(gitHubResponses.repoCommits)
+    expect(commits).toEqual(gitHubResponses.repoCommits)
   })
 
   test("fetches all commits of valid github user", async () => {
-    const fetchedUser = await fetchGitHubUser("valid-user")
-    const fetchedUserCommits = await fetchGitHubUserCommits(fetchedUser)
-
-    // needed to build the assertion
-    const fetchedRepos = await fetchGitHubUserRepos(fetchedUser)
-    const mockedCommits = commitsByUserId(
-      fetchedUser.id,
-      gitHubResponses.repoCommits
+    const { repos, commits } = await fetchGitHubUserReposAndCommits(
+      "valid-user"
     )
 
-    expect(fetchedUserCommits).toEqual(
-      fetchedRepos.map(() => mockedCommits).flat()
-    )
+    expect(repos).toEqual(gitHubResponses.userRepos)
+    expect(commits).toEqual(repos.map(() => gitHubResponses.repoCommits).flat())
   })
 })

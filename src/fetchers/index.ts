@@ -1,78 +1,71 @@
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../interfaces"
 
-const removeBracketsFromUrl = (url: string): string =>
-  url.replace(/({.*?})/gi, "")
-
-export const commitsByUserId = (
-  userId: number,
-  commits: GitHubCommit[]
-): GitHubCommit[] => commits.filter((c) => c.committer.id === userId)
-
 export const fetchGitHubUser = async (
   username: string
 ): Promise<GitHubUser> => {
   try {
-    const fetchedUser = await fetch(`https://api.github.com/users/${username}`)
+    const user = await fetch(`https://api.github.com/users/${username}`)
 
-    if (!fetchedUser.ok) {
+    if (!user.ok) {
       throw new Error(`could not fetch data of GitHub user: ${username}`)
     }
 
-    return fetchedUser.json()
+    return user.json()
   } catch (error) {
     throw error
   }
 }
 
 export const fetchGitHubUserRepos = async (
-  user: GitHubUser
+  username: string
 ): Promise<GitHubRepo[]> => {
-  const { login: username, repos_url } = user
-
   try {
-    const fetchedRepos = await fetch(repos_url)
+    const repos = await fetch(`https://api.github.com/users/${username}/repos`)
 
-    if (!fetchedRepos.ok) {
+    if (!repos.ok) {
       throw new Error(`could not fetch repos of GitHub user: ${username}`)
     }
 
-    return fetchedRepos.json()
+    return repos.json()
   } catch (error) {
     throw error
   }
 }
 
 export const fetchGitHubRepoCommits = async (
-  repo: GitHubRepo
+  username: string,
+  repoName: string
 ): Promise<GitHubCommit[]> => {
-  const { name, commits_url } = repo
-
   try {
-    const fetchedCommits = await fetch(removeBracketsFromUrl(commits_url))
+    const commits = await fetch(
+      `https://api.github.com/repos/${username}/${repoName}/commits`
+    )
 
-    if (!fetchedCommits.ok) {
-      throw new Error(`could not fetch commits of GitHub repo: ${name}`)
+    if (!commits.ok) {
+      throw new Error(`could not fetch commits of GitHub repo: ${repoName}`)
     }
 
-    return fetchedCommits.json()
+    return commits.json()
   } catch (error) {
     throw error
   }
 }
 
-export const fetchGitHubUserCommits = async (
-  user: GitHubUser
-): Promise<GitHubCommit[]> => {
-  const { login: username, id: userId } = user
-
+export const fetchGitHubUserReposAndCommits = async (
+  username: string
+): Promise<{ repos: GitHubRepo[]; commits: GitHubCommit[] }> => {
   try {
-    const fetchedUserRepos = await fetchGitHubUserRepos(user)
-    const fetchedAllCommits = await Promise.all(
-      fetchedUserRepos.map((r) => fetchGitHubRepoCommits(r))
-    )
+    const repos = await fetchGitHubUserRepos(username)
+    const commits = (
+      await Promise.all(
+        repos.map((r) => fetchGitHubRepoCommits(username, r.name))
+      )
+    ).flat()
 
-    return commitsByUserId(userId, fetchedAllCommits.flat())
+    return { repos, commits }
   } catch (error) {
-    throw new Error(`could not fetch all commits of GitHub user: ${username}`)
+    throw new Error(
+      `could not fetch repos and commits of GitHub user: ${username}`
+    )
   }
 }

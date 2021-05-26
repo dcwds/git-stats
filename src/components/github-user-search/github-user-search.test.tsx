@@ -9,7 +9,7 @@ describe("GitHubUserSearch", () => {
       <MemoryRouter>
         <GitHubUserSearch />
         <Switch>
-          <Route path="/stats/:user">
+          <Route path="/stats/:username">
             <p>stats blurb</p>
           </Route>
         </Switch>

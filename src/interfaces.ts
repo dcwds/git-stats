@@ -145,7 +145,7 @@ export interface GitHubCommit {
   html_url: string
   comments_url: string
   author: AuthorOrCommitter
-  committer: AuthorOrCommitter
+  committer: AuthorOrCommitter | null
   parents?: ParentsEntity[] | null
 }
 

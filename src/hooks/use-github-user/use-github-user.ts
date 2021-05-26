@@ -1,26 +1,41 @@
 import { useEffect, useState } from "react"
-import { GitHubUser } from "../../interfaces"
-import { fetchGitHubUser } from "../../fetchers"
+import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
+import { fetchGitHubUser, fetchGitHubUserReposAndCommits } from "../../fetchers"
+
+export const commitsByUserId = (
+  userId: number,
+  commits: GitHubCommit[]
+): GitHubCommit[] =>
+  commits.filter((c) => c.committer !== null && c.committer.id === userId)
 
 const useGitHubUser = (gitHubUsername: string) => {
-  const [gitHubUser, setGitHubUser] = useState<GitHubUser | null>(null)
+  const [user, setUser] = useState<GitHubUser | null>(null)
+  const [repos, setRepos] = useState<GitHubRepo[] | null>(null)
+  const [commits, setCommits] = useState<GitHubCommit[] | null>(null)
   const [status, setStatus] = useState<string>("idle")
 
   useEffect(() => {
     setStatus("loading")
     ;(async () => {
       try {
-        const user = await fetchGitHubUser(gitHubUsername)
+        const [fetchedUser, { repos: fetchedRepos, commits: fetchedCommits }] =
+          await Promise.all([
+            fetchGitHubUser(gitHubUsername),
+            fetchGitHubUserReposAndCommits(gitHubUsername),
+          ])
 
-        setGitHubUser(user)
+        setUser(fetchedUser)
+        setRepos(fetchedRepos)
+        setCommits(commitsByUserId(fetchedUser.id, fetchedCommits))
+
         setStatus("done")
-      } catch (err) {
+      } catch (error) {
         setStatus("error")
       }
     })()
   }, [gitHubUsername])
 
-  return { gitHubUser, status }
+  return { user, repos, commits, status }
 }
 
 export default useGitHubUser
