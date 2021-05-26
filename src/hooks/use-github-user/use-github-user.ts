@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react"
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
-import { fetchGitHubUser, fetchGitHubUserReposAndCommits } from "../../fetchers"
-
-export const commitsByUserId = (
-  userId: number,
-  commits: GitHubCommit[]
-): GitHubCommit[] =>
-  commits.filter((c) => c.committer !== null && c.committer.id === userId)
+import {
+  fetchGitHubUser,
+  fetchGitHubUserReposAndCommits,
+} from "../../fns/fetchers"
+import { getCommitsByUserId } from "../../fns"
 
 const useGitHubUser = (gitHubUsername: string) => {
   const [user, setUser] = useState<GitHubUser>()
@@ -26,7 +24,7 @@ const useGitHubUser = (gitHubUsername: string) => {
 
         setUser(fetchedUser)
         setRepos(fetchedRepos)
-        setCommits(commitsByUserId(fetchedUser.id, fetchedCommits))
+        setCommits(getCommitsByUserId(fetchedUser.id, fetchedCommits))
 
         setStatus("done")
       } catch (error) {

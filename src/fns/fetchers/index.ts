@@ -1,4 +1,4 @@
-import { GitHubUser, GitHubRepo, GitHubCommit } from "../interfaces"
+import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
 
 export const fetchGitHubUser = async (
   username: string

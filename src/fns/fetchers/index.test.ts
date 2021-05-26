@@ -3,8 +3,8 @@ import {
   fetchGitHubUserRepos,
   fetchGitHubRepoCommits,
   fetchGitHubUserReposAndCommits,
-} from "./"
-import gitHubResponses from "../mock-data/responses"
+} from "."
+import gitHubResponses from "../../mock-data/responses"
 
 describe("fetchers", () => {
   test("fetches data of valid github user", async () =>

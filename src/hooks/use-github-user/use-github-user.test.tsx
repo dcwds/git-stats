@@ -1,5 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks"
-import useGitHubUser, { commitsByUserId } from "./use-github-user"
+import useGitHubUser from "./use-github-user"
+import { commitsByUserId } from "../../fns"
 import gitHubResponses from "../../mock-data/responses"
 
 describe("useGitHubUser", () => {
