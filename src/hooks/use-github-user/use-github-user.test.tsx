@@ -8,9 +8,9 @@ describe("useGitHubUser", () => {
       useGitHubUser("valid-user")
     )
 
-    expect(result.current.user).toBeNull()
-    expect(result.current.repos).toBeNull()
-    expect(result.current.commits).toBeNull()
+    expect(result.current.user).toBeUndefined()
+    expect(result.current.repos).toBeUndefined()
+    expect(result.current.commits).toBeUndefined()
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
@@ -31,16 +31,16 @@ describe("useGitHubUser", () => {
       useGitHubUser("invalid-user")
     )
 
-    expect(result.current.user).toBeNull()
-    expect(result.current.repos).toBeNull()
-    expect(result.current.commits).toBeNull()
+    expect(result.current.user).toBeUndefined()
+    expect(result.current.repos).toBeUndefined()
+    expect(result.current.commits).toBeUndefined()
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toBeNull()
-    expect(result.current.repos).toBeNull()
-    expect(result.current.commits).toBeNull()
+    expect(result.current.user).toBeUndefined()
+    expect(result.current.repos).toBeUndefined()
+    expect(result.current.commits).toBeUndefined()
     expect(result.current.status).toBe("error")
   })
 
@@ -49,16 +49,16 @@ describe("useGitHubUser", () => {
       useGitHubUser("network-error")
     )
 
-    expect(result.current.user).toBeNull()
-    expect(result.current.repos).toBeNull()
-    expect(result.current.commits).toBeNull()
+    expect(result.current.user).toBeUndefined()
+    expect(result.current.repos).toBeUndefined()
+    expect(result.current.commits).toBeUndefined()
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toBeNull()
-    expect(result.current.repos).toBeNull()
-    expect(result.current.commits).toBeNull()
+    expect(result.current.user).toBeUndefined()
+    expect(result.current.repos).toBeUndefined()
+    expect(result.current.commits).toBeUndefined()
     expect(result.current.status).toBe("error")
   })
 })

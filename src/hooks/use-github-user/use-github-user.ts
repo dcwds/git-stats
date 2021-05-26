@@ -9,9 +9,9 @@ export const commitsByUserId = (
   commits.filter((c) => c.committer !== null && c.committer.id === userId)
 
 const useGitHubUser = (gitHubUsername: string) => {
-  const [user, setUser] = useState<GitHubUser | null>(null)
-  const [repos, setRepos] = useState<GitHubRepo[] | null>(null)
-  const [commits, setCommits] = useState<GitHubCommit[] | null>(null)
+  const [user, setUser] = useState<GitHubUser>()
+  const [repos, setRepos] = useState<GitHubRepo[]>()
+  const [commits, setCommits] = useState<GitHubCommit[]>()
   const [status, setStatus] = useState<string>("idle")
 
   useEffect(() => {
