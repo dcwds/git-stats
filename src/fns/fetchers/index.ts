@@ -4,17 +4,14 @@ export const fetchGitHubUser = async (
   username: string
 ): Promise<GitHubUser> => {
   try {
-    const user = await fetch(`https://api.github.com/users/${username}`, {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GH_TOKEN}`,
-      },
-    })
+    const user = await fetch(`/gh-api/gh-user?username=${username}`)
+    const data = await user.json()
 
     if (!user.ok) {
       throw new Error(`could not fetch data of GitHub user: ${username}`)
     }
 
-    return user.json()
+    return data
   } catch (error) {
     throw error
   }
@@ -24,20 +21,14 @@ export const fetchGitHubUserRepos = async (
   username: string
 ): Promise<GitHubRepo[]> => {
   try {
-    const repos = await fetch(
-      `https://api.github.com/users/${username}/repos`,
-      {
-        headers: {
-          Authorization: `token ${process.env.REACT_APP_GH_TOKEN}`,
-        },
-      }
-    )
+    const repos = await fetch(`/gh-api/gh-user-repos?username=${username}`)
+    const data = await repos.json()
 
     if (!repos.ok) {
       throw new Error(`could not fetch repos of GitHub user: ${username}`)
     }
 
-    return repos.json()
+    return data
   } catch (error) {
     throw error
   }
@@ -45,23 +36,19 @@ export const fetchGitHubUserRepos = async (
 
 export const fetchGitHubRepoCommits = async (
   username: string,
-  repoName: string
+  repo: string
 ): Promise<GitHubCommit[]> => {
   try {
     const commits = await fetch(
-      `https://api.github.com/repos/${username}/${repoName}/commits`,
-      {
-        headers: {
-          Authorization: `token ${process.env.REACT_APP_GH_TOKEN}`,
-        },
-      }
+      `/gh-api/gh-user-repo-commits?username=${username}&repo=${repo}`
     )
+    const data = await commits.json()
 
     if (!commits.ok) {
-      throw new Error(`could not fetch commits of GitHub repo: ${repoName}`)
+      throw new Error(`could not fetch commits of GitHub repo: ${repo}`)
     }
 
-    return commits.json()
+    return data
   } catch (error) {
     throw error
   }

@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks"
 import useGitHubUser from "./use-github-user"
-import { commitsByUserId } from "../../fns"
+import { getCommitsByUserId } from "../../fns"
 import gitHubResponses from "../../mock-data/responses"
 
 describe("useGitHubUser", () => {
@@ -19,7 +19,7 @@ describe("useGitHubUser", () => {
     expect(result.current.user).toEqual(gitHubResponses.user)
     expect(result.current.repos).toEqual(gitHubResponses.userRepos)
     expect(result.current.commits).toEqual(
-      commitsByUserId(
+      getCommitsByUserId(
         gitHubResponses.user.id,
         gitHubResponses.userRepos.map(() => gitHubResponses.repoCommits).flat()
       )

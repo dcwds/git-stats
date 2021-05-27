@@ -2,19 +2,19 @@ import { rest } from "msw"
 import gitHubResponses from "./mock-data/responses"
 
 const handlers = [
-  rest.get("https://api.github.com/users/:user", (req, res, ctx) => {
-    const { user } = req.params
+  rest.get("/gh-api/gh-user", (req, res, ctx) => {
+    const username = req.url.searchParams.get("username")
 
-    if (user === "invalid-user")
+    if (username === "invalid-user")
       return res(ctx.status(404), ctx.json({ message: "Not found" }))
-    if (user === "network-error") return res.networkError("network error")
+    if (username === "network-error") return res.networkError("network error")
 
     return res(ctx.status(200), ctx.json(gitHubResponses.user))
   }),
-  rest.get("https://api.github.com/users/:user/repos", (_, res, ctx) =>
+  rest.get("/gh-api/gh-user-repos", (_, res, ctx) =>
     res(ctx.status(200), ctx.json(gitHubResponses.userRepos))
   ),
-  rest.get("https://api.github.com/repos/:user/:repo/commits", (_, res, ctx) =>
+  rest.get("/gh-api/gh-user-repo-commits", (_, res, ctx) =>
     res(ctx.status(200), ctx.json(gitHubResponses.repoCommits))
   ),
 ]
