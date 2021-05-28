@@ -1,6 +1,6 @@
 import React from "react"
 
-const GitHubActivityFilter = () => (
+const GHActivityFilter = () => (
   <div>
     <label className="text-gray-200 mr-2" htmlFor="activity-select">
       Show activity for the past
@@ -14,4 +14,4 @@ const GitHubActivityFilter = () => (
   </div>
 )
 
-export default GitHubActivityFilter
+export default GHActivityFilter

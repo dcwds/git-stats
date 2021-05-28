@@ -1,12 +1,12 @@
 import { renderHook } from "@testing-library/react-hooks"
-import useGitHubUser from "./use-github-user"
+import useGHUser from "./use-gh-user"
 import { getCommitsByUserId } from "../../fns"
-import gitHubResponses from "../../mock-data/responses"
+import ghResponses from "../../mock-data/responses"
 
-describe("useGitHubUser", () => {
+describe("useGHUser", () => {
   test("updates state when fetching valid github user", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGitHubUser("valid-user")
+      useGHUser("valid-user")
     )
 
     expect(result.current.user).toBeUndefined()
@@ -16,12 +16,12 @@ describe("useGitHubUser", () => {
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toEqual(gitHubResponses.user)
-    expect(result.current.repos).toEqual(gitHubResponses.userRepos)
+    expect(result.current.user).toEqual(ghResponses.user)
+    expect(result.current.repos).toEqual(ghResponses.userRepos)
     expect(result.current.commits).toEqual(
       getCommitsByUserId(
-        gitHubResponses.user.id,
-        gitHubResponses.userRepos.map(() => gitHubResponses.repoCommits).flat()
+        ghResponses.user.id,
+        ghResponses.userRepos.map(() => ghResponses.repoCommits).flat()
       )
     )
     expect(result.current.status).toBe("done")
@@ -29,7 +29,7 @@ describe("useGitHubUser", () => {
 
   test("sets error status when fetching invalid github user", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGitHubUser("invalid-user")
+      useGHUser("invalid-user")
     )
 
     expect(result.current.user).toBeUndefined()
@@ -47,7 +47,7 @@ describe("useGitHubUser", () => {
 
   test("sets error status after bad request", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGitHubUser("network-error")
+      useGHUser("network-error")
     )
 
     expect(result.current.user).toBeUndefined()

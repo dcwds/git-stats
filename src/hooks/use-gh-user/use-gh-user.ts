@@ -1,16 +1,22 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
 import {
   fetchGitHubUser,
   fetchGitHubUserReposAndCommits,
 } from "../../fns/fetchers"
-import { getCommitsByUserId } from "../../fns"
+import { getCommitsByUserId, getCommitsByDaysAgo } from "../../fns"
 
-const useGitHubUser = (gitHubUsername: string) => {
+const useGHUser = (ghUsername: string, daysAgo?: number) => {
   const [user, setUser] = useState<GitHubUser>()
   const [repos, setRepos] = useState<GitHubRepo[]>()
   const [commits, setCommits] = useState<GitHubCommit[]>()
   const [status, setStatus] = useState<string>("idle")
+
+  const filteredCommits = useMemo(
+    () =>
+      daysAgo && commits && getCommitsByDaysAgo(new Date(), daysAgo, commits),
+    [daysAgo, commits]
+  )
 
   useEffect(() => {
     setStatus("loading")
@@ -18,8 +24,8 @@ const useGitHubUser = (gitHubUsername: string) => {
       try {
         const [fetchedUser, { repos: fetchedRepos, commits: fetchedCommits }] =
           await Promise.all([
-            fetchGitHubUser(gitHubUsername),
-            fetchGitHubUserReposAndCommits(gitHubUsername),
+            fetchGitHubUser(ghUsername),
+            fetchGitHubUserReposAndCommits(ghUsername),
           ])
 
         setUser(fetchedUser)
@@ -31,9 +37,9 @@ const useGitHubUser = (gitHubUsername: string) => {
         setStatus("error")
       }
     })()
-  }, [gitHubUsername])
+  }, [ghUsername])
 
-  return { user, repos, commits, status }
+  return { user, repos, commits, filteredCommits, status }
 }
 
-export default useGitHubUser
+export default useGHUser

@@ -1,14 +1,14 @@
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
-import gitHubUserResponse from "./github-user.json"
-import gitHubUserReposReponse from "./github-user-repos.json"
-import gitHubRepoCommitsResponse from "./github-repo-commits.json"
-import gitHubRecentCommitsResponse from "./github-recent-commits.json"
+import ghUserResponse from "./gh-user.json"
+import ghUserReposReponse from "./gh-user-repos.json"
+import ghRepoCommitsResponse from "./gh-repo-commits.json"
+import ghRecentCommitsResponse from "./gh-recent-commits.json"
 
-const gitHubResponses = {
-  user: gitHubUserResponse as GitHubUser,
-  userRepos: gitHubUserReposReponse as GitHubRepo[],
-  repoCommits: gitHubRepoCommitsResponse as GitHubCommit[],
-  recentCommits: gitHubRecentCommitsResponse as GitHubCommit[],
+const ghResponses = {
+  user: ghUserResponse as GitHubUser,
+  userRepos: ghUserReposReponse as GitHubRepo[],
+  repoCommits: ghRepoCommitsResponse as GitHubCommit[],
+  recentCommits: ghRecentCommitsResponse as GitHubCommit[],
 }
 
-export default gitHubResponses
+export default ghResponses

@@ -1,8 +1,7 @@
-import useGitHubUserSearch from "../../hooks/use-github-user-search"
+import useGHUserSearch from "../../hooks/use-gh-user-search"
 
-const GitHubUserSearch = () => {
-  const { gitHubUser, changeGitHubUser, searchGitHubUser } =
-    useGitHubUserSearch()
+const GHUserSearch = () => {
+  const { user, changeUser, searchUser } = useGHUserSearch()
 
   return (
     <div className="flex flex-row py-6 mb-6">
@@ -11,13 +10,13 @@ const GitHubUserSearch = () => {
         aria-label="search github user"
         type="text"
         placeholder="Search for a GitHub user..."
-        onChange={(e) => changeGitHubUser(e)}
-        onKeyDown={(e) => searchGitHubUser(e)}
+        onChange={(e) => changeUser(e)}
+        onKeyDown={(e) => searchUser(e)}
       />
       <button
         className="bg-blue-600 px-4 font-semibold rounded-md"
-        onClick={(e) => searchGitHubUser(e)}
-        disabled={!gitHubUser}
+        onClick={(e) => searchUser(e)}
+        disabled={!user}
       >
         Search
       </button>
@@ -25,4 +24,4 @@ const GitHubUserSearch = () => {
   )
 }
 
-export default GitHubUserSearch
+export default GHUserSearch

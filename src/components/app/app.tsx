@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import GitHubUserSearch from "../github-user-search"
-import GitHubStats from "../github-stats"
+import GHUserSearch from "../gh-user-search"
+import GHStats from "../gh-stats"
 
 const App = () => (
   <Router>
@@ -10,10 +10,10 @@ const App = () => (
           <p className="font-semibold">GitHub Stats</p>
         </header>
       </div>
-      <GitHubUserSearch />
+      <GHUserSearch />
       <Switch>
         <Route path="/stats/:username">
-          <GitHubStats />
+          <GHStats />
         </Route>
         <Route path="/">
           <p>Home placeholder.</p>

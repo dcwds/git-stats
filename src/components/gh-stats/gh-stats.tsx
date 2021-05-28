@@ -1,19 +1,20 @@
-import { FC } from "react"
+import { Dispatch, FC, SetStateAction, useState } from "react"
 import { GitHubUser } from "../../interfaces"
-import useGitHubUser from "../../hooks/use-github-user"
+import useGHUser from "../../hooks/use-gh-user"
 import { useParams } from "react-router-dom"
-import GitHubActivityFilter from "../github-activity-filter"
+import GitHubActivityFilter from "../gh-activity-filter"
 
-const GitHubStats = () => {
+const GHStats = () => {
   const { username } = useParams<{ username: string }>()
-  const { user, status } = useGitHubUser(username)
+  const [daysAgo, setDaysAgo] = useState<number>(30)
+  const { user, status } = useGHUser(username, daysAgo)
 
   return (
     <div>
       {
         {
           loading: <p>Fetching user data for {username}</p>,
-          done: <GitHubStatsDetails user={user} />,
+          done: <GHStatsDetails user={user} setDaysAgo={setDaysAgo} />,
           error: <p>Could not get stats for {username}</p>,
         }[status]
       }
@@ -21,7 +22,10 @@ const GitHubStats = () => {
   )
 }
 
-const GitHubStatsDetails: FC<{ user: GitHubUser | undefined }> = ({ user }) => {
+const GHStatsDetails: FC<{
+  user: GitHubUser | undefined
+  setDaysAgo: Dispatch<SetStateAction<number>>
+}> = ({ user }) => {
   return (
     <div>
       <div className="flex items-center mb-8">
@@ -43,4 +47,4 @@ const GitHubStatsDetails: FC<{ user: GitHubUser | undefined }> = ({ user }) => {
   )
 }
 
-export default GitHubStats
+export default GHStats

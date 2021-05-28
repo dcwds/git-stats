@@ -1,5 +1,5 @@
 import { rest } from "msw"
-import gitHubResponses from "./mock-data/responses"
+import ghResponses from "./mock-data/responses"
 
 const handlers = [
   rest.get("/gh-api/gh-user", (req, res, ctx) => {
@@ -9,13 +9,13 @@ const handlers = [
       return res(ctx.status(404), ctx.json({ message: "Not found" }))
     if (username === "network-error") return res.networkError("network error")
 
-    return res(ctx.status(200), ctx.json(gitHubResponses.user))
+    return res(ctx.status(200), ctx.json(ghResponses.user))
   }),
   rest.get("/gh-api/gh-user-repos", (_, res, ctx) =>
-    res(ctx.status(200), ctx.json(gitHubResponses.userRepos))
+    res(ctx.status(200), ctx.json(ghResponses.userRepos))
   ),
   rest.get("/gh-api/gh-user-repo-commits", (_, res, ctx) =>
-    res(ctx.status(200), ctx.json(gitHubResponses.repoCommits))
+    res(ctx.status(200), ctx.json(ghResponses.repoCommits))
   ),
 ]
 

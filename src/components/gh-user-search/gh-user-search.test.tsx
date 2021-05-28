@@ -1,13 +1,13 @@
-import GitHubUserSearch from "./github-user-search"
+import GHUserSearch from "./gh-user-search"
 import { MemoryRouter, Route, Switch } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 
-describe("GitHubUserSearch", () => {
+describe("GHUserSearch", () => {
   const setup = () =>
     render(
       <MemoryRouter>
-        <GitHubUserSearch />
+        <GHUserSearch />
         <Switch>
           <Route path="/stats/:username">
             <p>stats blurb</p>
