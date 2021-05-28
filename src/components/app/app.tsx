@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import GHUserSearch from "../gh-user-search"
-import GHStats from "../gh-stats"
+import * as GH from "../gh-stats"
 
 const App = () => (
   <Router>
@@ -13,7 +13,15 @@ const App = () => (
       <GHUserSearch />
       <Switch>
         <Route path="/stats/:username">
-          <GHStats />
+          <GH.StatsProvider>
+            <>
+              <GH.UserProfile />
+              <div className="bg-gray-900 rounded-md text-sm text-gray-300">
+                <GH.ActivityFilter />
+                <GH.UserCommits />
+              </div>
+            </>
+          </GH.StatsProvider>
         </Route>
         <Route path="/">
           <p>Home placeholder.</p>

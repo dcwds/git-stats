@@ -6,16 +6,15 @@ import {
 } from "../../fns/fetchers"
 import { getCommitsByUserId, getCommitsByDaysAgo } from "../../fns"
 
-const useGHUser = (ghUsername: string, daysAgo?: number) => {
+const useGHUser = (ghUsername: string, dayRange: number) => {
   const [user, setUser] = useState<GitHubUser>()
   const [repos, setRepos] = useState<GitHubRepo[]>()
   const [commits, setCommits] = useState<GitHubCommit[]>()
   const [status, setStatus] = useState<string>("idle")
 
   const filteredCommits = useMemo(
-    () =>
-      daysAgo && commits && getCommitsByDaysAgo(new Date(), daysAgo, commits),
-    [daysAgo, commits]
+    () => commits && getCommitsByDaysAgo(new Date(), dayRange, commits),
+    [dayRange, commits]
   )
 
   useEffect(() => {
