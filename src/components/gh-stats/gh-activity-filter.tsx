@@ -5,7 +5,7 @@ const ActivityFilter = () => {
   const { setDayRange } = useContext(StatsContext)
 
   return (
-    <div className="text-xs font-medium p-4 border-b-2 border-gray-800">
+    <div className="text-xs font-medium p-4">
       <label className="text-gray-300 mr-2" htmlFor="activity-select">
         Show activity for the past
       </label>

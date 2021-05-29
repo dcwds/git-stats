@@ -10,10 +10,11 @@ import useGHUser from "../../hooks/use-gh-user"
 import { useParams } from "react-router-dom"
 
 export const StatsContext = createContext<{
-  user: GitHubUser | undefined
-  repos: GitHubRepo[] | undefined
-  commits: GitHubCommit[] | undefined
-  filteredCommits: GitHubCommit[] | undefined
+  user: Partial<GitHubUser>
+  repos: GitHubRepo[]
+  commits: GitHubCommit[]
+  filteredCommits: GitHubCommit[]
+  datesWithCommitCounts: { date: Date; commitCount: number }[]
   setDayRange: Dispatch<SetStateAction<number>>
 }>({} as any)
 

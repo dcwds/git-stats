@@ -16,8 +16,8 @@ const App = () => (
           <GH.StatsProvider>
             <>
               <GH.UserProfile />
+              <GH.ActivityFilter />
               <div className="bg-gray-900 rounded-md text-sm text-gray-300">
-                <GH.ActivityFilter />
                 <GH.UserCommits />
               </div>
             </>

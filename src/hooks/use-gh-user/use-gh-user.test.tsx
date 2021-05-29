@@ -6,12 +6,12 @@ import ghResponses from "../../mock-data/responses"
 describe("useGHUser", () => {
   test("updates state when fetching valid github user", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGHUser("valid-user")
+      useGHUser("valid-user", 30)
     )
 
-    expect(result.current.user).toBeUndefined()
-    expect(result.current.repos).toBeUndefined()
-    expect(result.current.commits).toBeUndefined()
+    expect(result.current.user).toEqual({})
+    expect(result.current.repos).toEqual([])
+    expect(result.current.commits).toEqual([])
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
@@ -29,37 +29,37 @@ describe("useGHUser", () => {
 
   test("sets error status when fetching invalid github user", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGHUser("invalid-user")
+      useGHUser("invalid-user", 30)
     )
 
-    expect(result.current.user).toBeUndefined()
-    expect(result.current.repos).toBeUndefined()
-    expect(result.current.commits).toBeUndefined()
+    expect(result.current.user).toEqual({})
+    expect(result.current.repos).toEqual([])
+    expect(result.current.commits).toEqual([])
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toBeUndefined()
-    expect(result.current.repos).toBeUndefined()
-    expect(result.current.commits).toBeUndefined()
+    expect(result.current.user).toEqual({})
+    expect(result.current.repos).toEqual([])
+    expect(result.current.commits).toEqual([])
     expect(result.current.status).toBe("error")
   })
 
   test("sets error status after bad request", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGHUser("network-error")
+      useGHUser("network-error", 30)
     )
 
-    expect(result.current.user).toBeUndefined()
-    expect(result.current.repos).toBeUndefined()
-    expect(result.current.commits).toBeUndefined()
+    expect(result.current.user).toEqual({})
+    expect(result.current.repos).toEqual([])
+    expect(result.current.commits).toEqual([])
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toBeUndefined()
-    expect(result.current.repos).toBeUndefined()
-    expect(result.current.commits).toBeUndefined()
+    expect(result.current.user).toEqual({})
+    expect(result.current.repos).toEqual([])
+    expect(result.current.commits).toEqual([])
     expect(result.current.status).toBe("error")
   })
 })

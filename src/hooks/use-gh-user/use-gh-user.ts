@@ -4,17 +4,26 @@ import {
   fetchGitHubUser,
   fetchGitHubUserReposAndCommits,
 } from "../../fns/fetchers"
-import { getCommitsByUserId, getCommitsByDaysAgo } from "../../fns"
+import {
+  getCommitsByUserId,
+  getCommitsByDaysAgo,
+  getDatesWithCommitCounts,
+} from "../../fns"
 
 const useGHUser = (ghUsername: string, dayRange: number) => {
-  const [user, setUser] = useState<GitHubUser>()
-  const [repos, setRepos] = useState<GitHubRepo[]>()
-  const [commits, setCommits] = useState<GitHubCommit[]>()
+  const [user, setUser] = useState<Partial<GitHubUser>>({})
+  const [repos, setRepos] = useState<GitHubRepo[]>([])
+  const [commits, setCommits] = useState<GitHubCommit[]>([])
   const [status, setStatus] = useState<string>("idle")
 
   const filteredCommits = useMemo(
-    () => commits && getCommitsByDaysAgo(new Date(), dayRange, commits),
+    () => getCommitsByDaysAgo(new Date(), dayRange, commits),
     [dayRange, commits]
+  )
+
+  const datesWithCommitCounts = useMemo(
+    () => getDatesWithCommitCounts(new Date(), dayRange, filteredCommits),
+    [dayRange, filteredCommits]
   )
 
   useEffect(() => {
@@ -38,7 +47,14 @@ const useGHUser = (ghUsername: string, dayRange: number) => {
     })()
   }, [ghUsername])
 
-  return { user, repos, commits, filteredCommits, status }
+  return {
+    user,
+    repos,
+    commits,
+    status,
+    filteredCommits,
+    datesWithCommitCounts,
+  }
 }
 
 export default useGHUser

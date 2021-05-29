@@ -1,21 +1,28 @@
 import { GitHubCommit } from "../interfaces"
 
+export const sortDatesByEarliest = (dates: Date[]) =>
+  dates.sort((a, b) => a.getTime() - b.getTime())
+
+export const getPaddedDaysAgo = (daysAgo: number) => {
+  // When data is displayed, we often want to operate in
+  // whole weeks, so we pad the daysAgo value.
+  while (!!(daysAgo % 7)) daysAgo++
+
+  return daysAgo
+}
+
 export const getDatesByDaysAgo = (date: Date, daysAgo: number): Date[] => {
-  let dates: Date[] = [new Date(date)]
+  let dateCopy = new Date(date.valueOf())
+  let dates: Date[] = [new Date(dateCopy.valueOf())]
   let count: number = 0
 
-  while (++count < daysAgo) {
-    date.setDate(date.getDate() - 1)
-    dates = [...dates, new Date(date)]
+  while (++count < getPaddedDaysAgo(daysAgo)) {
+    dateCopy.setDate(dateCopy.getDate() - 1)
+    dates = [...dates, new Date(dateCopy.valueOf())]
   }
 
   return dates
 }
-
-export const sortCommitsByCommitDate = (commits: GitHubCommit[]) =>
-  commits.sort(
-    (a, b) => getCommitDate(b).getTime() - getCommitDate(a).getTime()
-  )
 
 export const getCommitsByUserId = (
   userId: number,
@@ -48,16 +55,19 @@ export const getDatesWithCommitCounts = (
   daysAgo: number,
   commits: GitHubCommit[]
 ) =>
-  getDatesByDaysAgo(date, daysAgo).reduce((datesAndCounts, curr) => {
-    const matchingCommits = commits.filter((c) => {
-      return getCommitDate(c).toDateString() === curr.toDateString()
-    })
+  sortDatesByEarliest(getDatesByDaysAgo(date, daysAgo)).reduce(
+    (datesAndCounts, curr) => {
+      const matchingCommits = commits.filter((c) => {
+        return getCommitDate(c).toDateString() === curr.toDateString()
+      })
 
-    return [
-      ...datesAndCounts,
-      {
-        date: curr,
-        commitCount: matchingCommits.length,
-      },
-    ]
-  }, [] as { date: Date; commitCount: number }[])
+      return [
+        ...datesAndCounts,
+        {
+          date: curr,
+          commitCount: matchingCommits.length,
+        },
+      ]
+    },
+    [] as { date: Date; commitCount: number }[]
+  )
