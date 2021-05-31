@@ -6,7 +6,7 @@ export const sortDatesByEarliest = (dates: Date[]) =>
 export const getPaddedDaysAgo = (daysAgo: number) => {
   // When data is displayed, we often want to operate in
   // whole weeks, so we pad the daysAgo value.
-  while (!!(daysAgo % 7)) daysAgo++
+  while (daysAgo % 7) daysAgo++
 
   return daysAgo
 }

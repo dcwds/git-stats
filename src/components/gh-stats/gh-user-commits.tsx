@@ -16,7 +16,10 @@ const UserCommits = () => {
   return (
     <div className="p-4">
       <h3>Commits</h3>
-      <p>They have made {commits?.length} commits.</p>
+      <p>
+        They have made {!!commits.length ? commits.length : "no"} commit
+        {commits.length !== 1 ? "s" : ""}.
+      </p>
 
       <div className="commits-graph pt-4" arial-label="commits graph">
         {datesWithCommitCounts.map((d) => (
