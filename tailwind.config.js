@@ -21,6 +21,7 @@ module.exports = {
       white: "#f0f6fc",
       gray: gitHubGray,
       blue: colors.blue,
+      black: colors.black,
     },
     fontFamily: {
       primary: [

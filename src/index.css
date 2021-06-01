@@ -31,6 +31,38 @@
 
     @apply bg-gray-800 rounded;
   }
+
+  .tooltip {
+    bottom: calc(100% + 3px);
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+
+    @apply invisible absolute;
+  }
+
+  .tooltip .arrow-down {
+    right: 50%;
+    top: 100%;
+    transform: translateX(50%);
+    @apply absolute;
+  }
+
+  .has-tooltip {
+    @apply relative;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
+  }
+
+  .arrow-down {
+    height: 0;
+    width: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid black;
+  }
 }
 
 @tailwind utilities;

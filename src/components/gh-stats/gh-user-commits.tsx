@@ -9,6 +9,26 @@ const getCommitCountColor = (count: number): string => {
   else return "#39d353"
 }
 
+const Cell = ({ date, commitCount }: { date: Date; commitCount: number }) => (
+  <div
+    className={(!!commitCount ? "cursor-pointer " : "") + "has-tooltip"}
+    style={{ backgroundColor: getCommitCountColor(commitCount) }}
+  >
+    {!!commitCount && (
+      <div className="tooltip bg-black p-2 rounded shadow text-xs">
+        <p>
+          <strong className="text-white">
+            {commitCount} commit{commitCount !== 1 ? "s" : ""}
+          </strong>{" "}
+          on {date.toDateString()}
+        </p>
+
+        <div className="arrow-down"></div>
+      </div>
+    )}
+  </div>
+)
+
 const UserCommits = () => {
   const { filteredCommits: commits, datesWithCommitCounts } =
     useContext(StatsContext)
@@ -23,10 +43,7 @@ const UserCommits = () => {
 
       <div className="commits-graph pt-4" arial-label="commits graph">
         {datesWithCommitCounts.map((d) => (
-          <div
-            key={d.date.toDateString()}
-            style={{ backgroundColor: getCommitCountColor(d.commitCount) }}
-          ></div>
+          <Cell key={d.date.toDateString()} {...d} />
         ))}
       </div>
     </div>
