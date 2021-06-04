@@ -2,28 +2,34 @@ import { useEffect, useMemo, useState } from "react"
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
 import {
   fetchGitHubUser,
-  fetchGitHubUserReposAndCommits,
+  fetchGitHubUserReposAndCommits
 } from "../../fns/fetchers"
 import {
   getCommitsByUserId,
-  getCommitsByDaysAgo,
-  getDatesWithCommitCounts,
+  getCommitsByDayCount,
+  getCommitDates,
+  getMonthMarkersByDayRange
 } from "../../fns"
 
-const useGHUser = (ghUsername: string, dayRange: number) => {
+const useGHUser = (ghUsername: string, dayCount: number) => {
   const [user, setUser] = useState<Partial<GitHubUser>>({})
   const [repos, setRepos] = useState<GitHubRepo[]>([])
   const [commits, setCommits] = useState<GitHubCommit[]>([])
   const [status, setStatus] = useState<string>("idle")
 
   const filteredCommits = useMemo(
-    () => getCommitsByDaysAgo(new Date(), dayRange, commits),
-    [dayRange, commits]
+    () => getCommitsByDayCount(new Date(), dayCount, commits),
+    [dayCount, commits]
   )
 
-  const datesWithCommitCounts = useMemo(
-    () => getDatesWithCommitCounts(new Date(), dayRange, filteredCommits),
-    [dayRange, filteredCommits]
+  const commitDates = useMemo(
+    () => getCommitDates(new Date(), dayCount, filteredCommits),
+    [dayCount, filteredCommits]
+  )
+
+  const monthMarkers = useMemo(
+    () => getMonthMarkersByDayRange(dayCount),
+    [dayCount]
   )
 
   useEffect(() => {
@@ -33,7 +39,7 @@ const useGHUser = (ghUsername: string, dayRange: number) => {
         const [fetchedUser, { repos: fetchedRepos, commits: fetchedCommits }] =
           await Promise.all([
             fetchGitHubUser(ghUsername),
-            fetchGitHubUserReposAndCommits(ghUsername),
+            fetchGitHubUserReposAndCommits(ghUsername)
           ])
 
         setUser(fetchedUser)
@@ -53,7 +59,8 @@ const useGHUser = (ghUsername: string, dayRange: number) => {
     commits,
     status,
     filteredCommits,
-    datesWithCommitCounts,
+    commitDates,
+    monthMarkers
   }
 }
 

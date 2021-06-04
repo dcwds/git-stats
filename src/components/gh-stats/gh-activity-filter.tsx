@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { StatsContext } from "./gh-stats-context"
 
 const ActivityFilter = () => {
-  const { setDayRange } = useContext(StatsContext)
+  const { setDayCount } = useContext(StatsContext)
 
   return (
     <div className="text-xs font-medium p-4">
@@ -12,12 +12,12 @@ const ActivityFilter = () => {
       <select
         className="text-gray-600"
         id="activity-select"
-        onChange={(e) => setDayRange(Number(e.target.value))}
+        onChange={(e) => setDayCount(Number(e.target.value))}
       >
-        <option value="30">month</option>
-        <option value="90">3 months</option>
-        <option value="180">6 months</option>
-        <option value="365">year</option>
+        <option value={30}>month</option>
+        <option value={90}>3 months</option>
+        <option value={180}>6 months</option>
+        <option value={365}>year</option>
       </select>
     </div>
   )
