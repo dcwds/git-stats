@@ -18,17 +18,32 @@
 @tailwind components;
 
 @layer components {
-  .commits-graph {
-    display: grid;
-    grid-template-rows: repeat(7, 1fr);
+  .graph-content {
+    grid-template-columns: 2.3em 1fr;
 
-    @apply gap-1 grid-flow-col;
+    @apply grid;
   }
 
-  .commits-graph > div {
+  .graph-dates {
+    grid-template-rows: repeat(7, 1fr);
+
+    @apply grid gap-1 grid-flow-col;
+  }
+
+  .graph-dates > div {
     padding-bottom: 100%;
 
     @apply bg-gray-800 rounded;
+  }
+
+  .graph-months {
+    @apply grid gap-1 capitalize text-xs mb-2;
+  }
+
+  .graph-days {
+    grid-template-rows: repeat(7, 1fr);
+
+    @apply grid gap-1 capitalize text-xs mr-2;
   }
 
   .tooltip {

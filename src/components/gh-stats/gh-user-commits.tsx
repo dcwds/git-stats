@@ -46,20 +46,28 @@ const UserCommits = () => {
       </p>
 
       {!!commits.length && (
-        <>
+        <div className="mt-4">
           <div
-            className="grid gap-1 pt-4 capitalize text-xs mb-2"
+            className="graph-months"
             style={{
-              gridTemplateColumns: `repeat(${Math.ceil(
+              gridTemplateColumns: `2.3em repeat(${Math.ceil(
                 commitDates.length / 7
               )}, 1fr)`
             }}
           >
+            {
+              // this div is required as an offset, as weekdays sit in this
+              // position later in the graph
+            }
+            <div></div>
+
             {R.addIndex<GraphMonth>(R.map)(
               ({ month, start, end }, idx) => (
+                // 2 is added to start and end values because of the weekdays
+                // offset and the graph months data using an index of 0
                 <div
                   key={idx}
-                  style={{ gridColumn: `${start + 1} / ${end + 1}` }}
+                  style={{ gridColumn: `${start + 2} / ${end + 2}` }}
                 >
                   {month}
                 </div>
@@ -68,15 +76,27 @@ const UserCommits = () => {
             )}
           </div>
 
-          <div arial-label="commits graph" className="commits-graph">
-            {R.map(
-              (d) => (
-                <Cell key={d.date.toDateString()} {...d} />
-              ),
-              commitDates
-            )}
+          <div className="graph-content">
+            <div className="graph-days">
+              <div></div>
+              <div>mon</div>
+              <div></div>
+              <div>wed</div>
+              <div></div>
+              <div>fri</div>
+              <div></div>
+            </div>
+
+            <div arial-label="graph dates" className="graph-dates">
+              {R.map(
+                (d) => (
+                  <Cell key={d.date.toDateString()} {...d} />
+                ),
+                commitDates
+              )}
+            </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   )
