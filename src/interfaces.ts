@@ -203,3 +203,9 @@ export interface ParentsEntity {
   url: string
   html_url: string
 }
+
+export interface GraphMonth {
+  month: string
+  start: number
+  end: number
+}

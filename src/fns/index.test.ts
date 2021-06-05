@@ -16,8 +16,10 @@ describe("fns", () => {
 
   test("gets correct dates", () => {
     // Mon May 31 2021 04:00:00 GMT+0000
-    const dates = fns.getDatesByDayCount(new Date(1622433600 * 1000))(7)
+    const dates = fns.getDatesByDayCount(new Date(1622433600 * 1000), 7)
     const expected = [
+      1621742400 * 1000, // sun (filled)
+      1621828800 * 1000, // mon (filled)
       1621915200 * 1000,
       1622001600 * 1000,
       1622088000 * 1000,
@@ -67,43 +69,37 @@ describe("fns", () => {
 
     const expected = [
       {
+        // May 23 - sun (filled)
+        date: 1621742400 * 1000,
+        commitCount: 0
+      },
+      {
+        // May 24 - mon (filled)
+        date: 1621828800 * 1000,
+        commitCount: 3
+      },
+      {
         // May 25
-        // commits:
-        // 2021-05-25T19:44:07Z
-        // 2021-05-25T16:04:23Z
-        // 2021-05-25T03:14:30Z
         date: 1621915200 * 1000,
         commitCount: 3
       },
       {
         // May 26
-        // commits:
-        // 2021-05-26T16:43:44Z
-        // 2021-05-26T03:05:23Z
-        // 2021-05-26T02:58:36Z
         date: 1622001600 * 1000,
         commitCount: 3
       },
       {
         // May 27
-        // commits:
-        // 2021-05-27T19:41:37Z
-        // 2021-05-27T04:03:50Z
         date: 1622088000 * 1000,
         commitCount: 2
       },
       {
         // May 28
-        // commits:
-        // 2021-05-28T16:38:35Z
-        // 2021-05-28T02:43:26Z
         date: 1622174400 * 1000,
         commitCount: 2
       },
       {
         // May 29
-        // commits:
-        // 2021-05-29T18:06:52Z
         date: 1622260800 * 1000,
         commitCount: 1
       },

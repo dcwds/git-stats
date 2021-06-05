@@ -1,4 +1,4 @@
-import { GitHubCommit } from "../interfaces"
+import { GitHubCommit, GraphMonth } from "../interfaces"
 import * as R from "ramda"
 
 export const numbersDesc = (a: number, b: number) => b - a
@@ -26,16 +26,31 @@ export const monthNumToText = (n: number) => {
 
 export const getDayRange = R.compose(R.range(0), roundToWeek)
 
-// Using `R.curry` here produces a TS error:
-// `expected 0 arguments but got 1` when calling it.
-// TODO: do more research on TS error
-export const getDatesByDayCount = (startDate: Date) => (dayCount: number) =>
+export const numbersToDates = (startDate: Date, dayCount: number) =>
   R.map((n: number) => {
     const dateCopy = new Date(startDate.valueOf())
     dateCopy.setDate(dateCopy.getDate() - n)
 
     return dateCopy
   }, R.sort(numbersDesc, getDayRange(dayCount)))
+
+export const fillDatesToSunday = (dates: Date[]) => {
+  let earliestDate = dates[0]
+
+  if (earliestDate.getDay() === 0) return dates
+
+  while (earliestDate.getDay() !== 0) {
+    const dateCopy = new Date(earliestDate.valueOf())
+    dateCopy.setDate(dateCopy.getDate() - 1)
+
+    dates = R.prepend(dateCopy, dates)
+    earliestDate = dates[0]
+  }
+
+  return dates
+}
+
+export const getDatesByDayCount = R.compose(fillDatesToSunday, numbersToDates)
 
 export const getCommitsByUserId = (
   userId: number,
@@ -53,7 +68,7 @@ export const getCommitsByDayCount = (
 ): GitHubCommit[] => {
   const datesAsTimes = R.map(
     (d) => d.getTime(),
-    getDatesByDayCount(startDate)(dayCount)
+    getDatesByDayCount(startDate, dayCount)
   )
 
   return R.filter((c) => {
@@ -87,7 +102,7 @@ export const getCommitDates = (
       ]
     },
     [] as { date: Date; commitCount: number }[],
-    getDatesByDayCount(startDate)(dayCount)
+    getDatesByDayCount(startDate, dayCount)
   )
 
 export const getStartOfMonths = (monthNums: number[][]) => {
@@ -112,29 +127,44 @@ export const getStartOfMonths = (monthNums: number[][]) => {
   return months
 }
 
-export const getMonthsWithWeekCounts = (months: number[]) => {
-  let month: number | null = null
-  let addMonth = (month: number, weekCount: number) =>
-    R.append({
+export const getMonthPositions = (months: number[]) => {
+  const addMonth = (
+    month: number,
+    weekCount: number,
+    prevMonth: GraphMonth | undefined
+  ) => {
+    return R.append({
       month: monthNumToText(month),
-      weekCount: weekCount + 1 // month week is inclusive
+      start: (R.isNil(prevMonth) ? 0 : prevMonth.end) + weekOffset,
+      // month week is inclusive, so 1 is added
+      end: (R.isNil(prevMonth) ? 0 : prevMonth.end) + weekCount + 1
     })
+  }
+  let month: number | null = null
   let weekCount = 0
-  let res: { month: string; weekCount: number }[] = []
+  let weekOffset = 0
+  let res: GraphMonth[] = []
 
   while (months.length) {
-    let curr = months[0]
+    const curr = months[0]
+    const prevMonth = R.last(res)
+
     months = R.tail(months)
 
     if (curr === -1) {
-      if (R.isNil(month)) continue
+      if (R.isNil(month)) {
+        // Weeks that are not exclusive to a particular month need to be
+        // tracked so month positions are placed correctly in the timeline.
+        weekOffset++
+        continue
+      }
 
       weekCount++
     } else {
       if (R.isNil(month)) month = curr
 
       if (curr !== month) {
-        res = addMonth(month, weekCount)(res)
+        res = addMonth(month, weekCount, prevMonth)(res)
 
         month = curr
         weekCount = 0
@@ -146,17 +176,17 @@ export const getMonthsWithWeekCounts = (months: number[]) => {
       !months.length &&
       !R.find(R.propEq("month", monthNumToText(month)))(res)
     )
-      res = addMonth(month, weekCount)(res)
+      res = addMonth(month, weekCount, prevMonth)(res)
   }
 
   return res
 }
 
-export const getMonthMarkersByDayRange = R.compose(
-  getMonthsWithWeekCounts,
+export const getMonthMarkers = R.compose(
+  getMonthPositions,
   getStartOfMonths,
   R.map((w: number[]) => R.uniq(w)),
   R.splitEvery(7),
   R.map((d: Date) => d.getMonth()),
-  getDatesByDayCount(new Date())
+  getDatesByDayCount
 )

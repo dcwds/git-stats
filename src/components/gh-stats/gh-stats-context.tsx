@@ -5,7 +5,12 @@ import {
   ReactChild,
   SetStateAction
 } from "react"
-import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
+import {
+  GitHubUser,
+  GitHubRepo,
+  GitHubCommit,
+  GraphMonth
+} from "../../interfaces"
 import useGHUser from "../../hooks/use-gh-user"
 import { useParams } from "react-router-dom"
 
@@ -16,7 +21,7 @@ export const StatsContext = createContext<{
   commitDates: { date: Date; commitCount: number }[]
   filteredCommits: GitHubCommit[]
   setDayCount: Dispatch<SetStateAction<number>>
-  monthMarkers: { month: string; weekCount: number }[]
+  monthMarkers: GraphMonth[]
 }>({} as any)
 
 export const StatsProvider = ({ children }: { children: ReactChild }) => {

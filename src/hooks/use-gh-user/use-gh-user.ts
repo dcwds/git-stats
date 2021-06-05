@@ -8,7 +8,7 @@ import {
   getCommitsByUserId,
   getCommitsByDayCount,
   getCommitDates,
-  getMonthMarkersByDayRange
+  getMonthMarkers
 } from "../../fns"
 
 const useGHUser = (ghUsername: string, dayCount: number) => {
@@ -28,7 +28,7 @@ const useGHUser = (ghUsername: string, dayCount: number) => {
   )
 
   const monthMarkers = useMemo(
-    () => getMonthMarkersByDayRange(dayCount),
+    () => getMonthMarkers(new Date(), dayCount),
     [dayCount]
   )
 

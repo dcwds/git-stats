@@ -1,3 +1,4 @@
+import { GraphMonth } from "../../interfaces"
 import { useContext } from "react"
 import { StatsContext } from "./gh-stats-context"
 import * as R from "ramda"
@@ -47,16 +48,19 @@ const UserCommits = () => {
       {!!commits.length && (
         <>
           <div
-            className="grid pt-4 capitalize text-xs mb-2"
+            className="grid gap-1 pt-4 capitalize text-xs mb-2"
             style={{
-              gridTemplateColumns: `repeat(${Math.floor(
+              gridTemplateColumns: `repeat(${Math.ceil(
                 commitDates.length / 7
               )}, 1fr)`
             }}
           >
-            {R.addIndex<{ month: string; weekCount: number }>(R.map)(
-              ({ month, weekCount }, idx) => (
-                <div key={idx} style={{ gridColumn: `1 / ${weekCount}` }}>
+            {R.addIndex<GraphMonth>(R.map)(
+              ({ month, start, end }, idx) => (
+                <div
+                  key={idx}
+                  style={{ gridColumn: `${start + 1} / ${end + 1}` }}
+                >
                   {month}
                 </div>
               ),
