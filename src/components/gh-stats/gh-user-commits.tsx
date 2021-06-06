@@ -14,7 +14,7 @@ const getCommitCountColor = (count: number): string => {
 
 const Cell = ({ date, commitCount }: { date: Date; commitCount: number }) => (
   <div
-    className="has-tooltip cursor-pointer"
+    className="has-tooltip"
     style={{ backgroundColor: getCommitCountColor(commitCount) }}
   >
     <div className="tooltip bg-black p-2 rounded shadow text-xs">
