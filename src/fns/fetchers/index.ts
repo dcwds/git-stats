@@ -1,4 +1,5 @@
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
+import * as R from "ramda"
 
 export const fetchGitHubUser = async (
   username: string
@@ -54,18 +55,31 @@ export const fetchGitHubRepoCommits = async (
   }
 }
 
-export const fetchGitHubUserReposAndCommits = async (
+export const fetchGitHubUserReposWithCommits = async (
   username: string
-): Promise<{ repos: GitHubRepo[]; commits: GitHubCommit[] }> => {
+): Promise<
+  {
+    name: string
+    description: string
+    url: string
+    commits: GitHubCommit[]
+  }[]
+> => {
   try {
     const repos = await fetchGitHubUserRepos(username)
-    const commits = (
-      await Promise.all(
-        repos.map((r) => fetchGitHubRepoCommits(username, r.name))
+    const reposWithCommits = Promise.all(
+      R.map(
+        async ({ name, description, html_url }) => ({
+          name,
+          description,
+          url: html_url,
+          commits: await fetchGitHubRepoCommits(username, name)
+        }),
+        repos
       )
-    ).flat()
+    )
 
-    return { repos, commits }
+    return reposWithCommits
   } catch (error) {
     throw new Error(
       `could not fetch repos and commits of GitHub user: ${username}`

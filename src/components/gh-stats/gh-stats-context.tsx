@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom"
 
 export const StatsContext = createContext<{
   user: Partial<GitHubUser>
-  repos: GitHubRepo[]
+  repos: Partial<GitHubRepo>[]
   commits: GitHubCommit[]
   commitDates: { date: Date; commitCount: number }[]
   filteredCommits: GitHubCommit[]

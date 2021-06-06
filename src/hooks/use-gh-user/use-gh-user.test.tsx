@@ -2,11 +2,12 @@ import { renderHook } from "@testing-library/react-hooks"
 import useGHUser from "./use-gh-user"
 import { getCommitsByUserId } from "../../fns"
 import ghResponses from "../../mock-data/responses"
+import * as R from "ramda"
 
 describe("useGHUser", () => {
   test("updates state when fetching valid github user", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGHUser("valid-user", 30)
+      useGHUser("valid-user")
     )
 
     expect(result.current.user).toEqual({})
@@ -17,7 +18,17 @@ describe("useGHUser", () => {
     await waitForNextUpdate()
 
     expect(result.current.user).toEqual(ghResponses.user)
-    expect(result.current.repos).toEqual(ghResponses.userRepos)
+    expect(result.current.repos).toEqual(
+      R.map(
+        ({ name, description, html_url }) => ({
+          name,
+          description,
+          url: html_url,
+          commits: ghResponses.repoCommits
+        }),
+        ghResponses.userRepos
+      )
+    )
     expect(result.current.commits).toEqual(
       getCommitsByUserId(
         ghResponses.user.id,
@@ -29,7 +40,7 @@ describe("useGHUser", () => {
 
   test("sets error status when fetching invalid github user", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGHUser("invalid-user", 30)
+      useGHUser("invalid-user")
     )
 
     expect(result.current.user).toEqual({})
@@ -47,7 +58,7 @@ describe("useGHUser", () => {
 
   test("sets error status after bad request", async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useGHUser("network-error", 30)
+      useGHUser("network-error")
     )
 
     expect(result.current.user).toEqual({})

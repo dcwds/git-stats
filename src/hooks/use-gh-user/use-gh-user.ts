@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
 import {
   fetchGitHubUser,
-  fetchGitHubUserReposAndCommits
+  fetchGitHubUserReposWithCommits
 } from "../../fns/fetchers"
 import {
   getCommitsByUserId,
@@ -10,10 +10,11 @@ import {
   getCommitDates,
   getMonthMarkers
 } from "../../fns"
+import * as R from "ramda"
 
 const useGHUser = (ghUsername: string) => {
   const [user, setUser] = useState<Partial<GitHubUser>>({})
-  const [repos, setRepos] = useState<GitHubRepo[]>([])
+  const [repos, setRepos] = useState<Partial<GitHubRepo>[]>([])
   const [commits, setCommits] = useState<GitHubCommit[]>([])
   const [status, setStatus] = useState<string>("idle")
 
@@ -40,15 +41,19 @@ const useGHUser = (ghUsername: string) => {
     setStatus("loading")
     ;(async () => {
       try {
-        const [fetchedUser, { repos: fetchedRepos, commits: fetchedCommits }] =
-          await Promise.all([
-            fetchGitHubUser(ghUsername),
-            fetchGitHubUserReposAndCommits(ghUsername)
-          ])
+        const [fetchedUser, fetchedReposWithCommits] = await Promise.all([
+          fetchGitHubUser(ghUsername),
+          fetchGitHubUserReposWithCommits(ghUsername)
+        ])
 
         setUser(fetchedUser)
-        setRepos(fetchedRepos)
-        setCommits(getCommitsByUserId(fetchedUser.id, fetchedCommits))
+        setRepos(fetchedReposWithCommits)
+        setCommits(
+          getCommitsByUserId(
+            fetchedUser.id,
+            R.flatten(R.pluck("commits", fetchedReposWithCommits))
+          )
+        )
 
         setStatus("done")
       } catch (error) {
