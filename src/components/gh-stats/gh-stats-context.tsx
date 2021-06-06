@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useState,
-  Dispatch,
-  ReactChild,
-  SetStateAction
-} from "react"
+import { createContext, ReactChild } from "react"
 import {
   GitHubUser,
   GitHubRepo,
@@ -20,17 +14,15 @@ export const StatsContext = createContext<{
   commits: GitHubCommit[]
   commitDates: { date: Date; commitCount: number }[]
   filteredCommits: GitHubCommit[]
-  setDayCount: Dispatch<SetStateAction<number>>
   monthMarkers: GraphMonth[]
 }>({} as any)
 
 export const StatsProvider = ({ children }: { children: ReactChild }) => {
   const { username } = useParams<{ username: string }>()
-  const [dayCount, setDayCount] = useState<number>(180)
-  const { status, ...rest } = useGHUser(username, dayCount)
+  const { status, ...rest } = useGHUser(username)
 
   return (
-    <StatsContext.Provider value={{ ...rest, setDayCount }}>
+    <StatsContext.Provider value={{ ...rest }}>
       {
         {
           loading: <p>Fetching user data for {username}</p>,

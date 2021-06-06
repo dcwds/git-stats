@@ -11,11 +11,15 @@ import {
   getMonthMarkers
 } from "../../fns"
 
-const useGHUser = (ghUsername: string, dayCount: number) => {
+const useGHUser = (ghUsername: string) => {
   const [user, setUser] = useState<Partial<GitHubUser>>({})
   const [repos, setRepos] = useState<GitHubRepo[]>([])
   const [commits, setCommits] = useState<GitHubCommit[]>([])
   const [status, setStatus] = useState<string>("idle")
+
+  // This can later be abstracted into an activity filter hook
+  // as a potential feature.
+  const dayCount = 180
 
   const filteredCommits = useMemo(
     () => getCommitsByDayCount(new Date(), dayCount, commits),
