@@ -37,13 +37,13 @@
   }
 
   .graph-months {
-    @apply grid gap-1 capitalize text-xs mb-2;
+    @apply grid gap-1 capitalize text-xs text-gray-400 mb-2;
   }
 
   .graph-days {
     grid-template-rows: repeat(7, 1fr);
 
-    @apply grid gap-1 capitalize text-xs mr-2;
+    @apply grid gap-1 capitalize text-xs text-gray-400 mr-2;
   }
 
   .tooltip {

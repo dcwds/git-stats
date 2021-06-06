@@ -175,8 +175,11 @@ export const getMonthPositions = (months: number[]) => {
     if (
       !months.length &&
       !R.find(R.propEq("month", monthNumToText(month)))(res)
-    )
-      res = addMonth(month, weekCount, prevMonth)(res)
+    ) {
+      // prevMonth value is not updated in this iteration,
+      // so we pass it explicitly.
+      res = addMonth(month, weekCount, R.last(res))(res)
+    }
   }
 
   return res
@@ -190,3 +193,12 @@ export const getMonthMarkers = R.compose(
   R.map((d: Date) => d.getMonth()),
   getDatesByDayCount
 )
+
+// a month that sits on the very edge of the graph
+// should not be considered, as it can't legally span to the next
+// grid column (nonexistent), and therefore introduces layout issues
+export const withoutEdgeMonth = (edgeNumber: number, months: GraphMonth[]) =>
+  R.filter((m) => {
+    // add 1 because CSS grid column does not operate with a starting index of 0
+    return m.start + 1 !== edgeNumber
+  }, months)

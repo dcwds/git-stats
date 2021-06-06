@@ -1,6 +1,7 @@
 import { GraphMonth } from "../../interfaces"
 import { useContext } from "react"
 import { StatsContext } from "./gh-stats-context"
+import { withoutEdgeMonth } from "../../fns"
 import * as R from "ramda"
 
 const getCommitCountColor = (count: number): string => {
@@ -63,8 +64,9 @@ const UserCommits = () => {
 
             {R.addIndex<GraphMonth>(R.map)(
               ({ month, start, end }, idx) => (
-                // 2 is added to start and end values because of the weekdays
-                // offset and the graph months data using an index of 0
+                // add 2 to start and end because:
+                // - weekdays offset column (empty div)
+                // - graph months use a starting index of 0
                 <div
                   key={idx}
                   style={{ gridColumn: `${start + 2} / ${end + 2}` }}
@@ -72,7 +74,7 @@ const UserCommits = () => {
                   {month}
                 </div>
               ),
-              monthMarkers
+              withoutEdgeMonth(Math.ceil(commitDates.length / 7), monthMarkers)
             )}
           </div>
 
