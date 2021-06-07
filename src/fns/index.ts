@@ -145,19 +145,13 @@ export const getMonthPositions = (months: number[]) => {
   let weekOffset = 0
   let res: GraphMonth[] = []
 
-  while (months.length) {
-    const curr = months[0]
+  R.addIndex<number>(R.forEach)((curr, idx) => {
     const prevMonth = R.last(res)
 
-    months = R.tail(months)
-
     if (curr === -1) {
-      if (R.isNil(month)) {
-        // Weeks that are not exclusive to a particular month need to be
-        // tracked so month positions are placed correctly in the timeline.
-        weekOffset++
-        continue
-      }
+      // Weeks that are not exclusive to a particular month need to be
+      // tracked so month positions are placed correctly in the timeline.
+      if (R.isNil(month)) return weekOffset++
 
       weekCount++
     } else {
@@ -173,14 +167,14 @@ export const getMonthPositions = (months: number[]) => {
 
     // Handle update for the case where a next month never occurs.
     if (
-      !months.length &&
+      R.isNil(months[idx + 1]) &&
       !R.find(R.propEq("month", monthNumToText(month)))(res)
     ) {
       // prevMonth value is not updated in this iteration,
       // so we pass it explicitly.
       res = addMonth(month, weekCount, R.last(res))(res)
     }
-  }
+  }, months)
 
   return res
 }

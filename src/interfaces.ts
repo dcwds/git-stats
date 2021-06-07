@@ -209,3 +209,7 @@ export interface GraphMonth {
   start: number
   end: number
 }
+
+export interface fetchedGitHubRepo extends Partial<GitHubRepo> {
+  commits: GitHubCommit[]
+}

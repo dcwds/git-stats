@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
-import { GitHubUser, GitHubRepo, GitHubCommit } from "../../interfaces"
+import { GitHubUser, fetchedGitHubRepo } from "../../interfaces"
+import { DAY_COUNT } from "../../constants"
 import {
   fetchGitHubUser,
   fetchGitHubUserReposWithCommits
@@ -13,29 +14,37 @@ import {
 import * as R from "ramda"
 
 const useGHUser = (ghUsername: string) => {
-  const [user, setUser] = useState<Partial<GitHubUser>>({})
-  const [repos, setRepos] = useState<Partial<GitHubRepo>[]>([])
-  const [commits, setCommits] = useState<GitHubCommit[]>([])
+  const [user, setUser] = useState<GitHubUser | null>(null)
+  const [repos, setRepos] = useState<fetchedGitHubRepo[]>([])
   const [status, setStatus] = useState<string>("idle")
 
-  // This can later be abstracted into an activity filter hook
-  // as a potential feature.
-  const dayCount = 180
+  const filteredRepos = useMemo(() => {
+    if (!user) return []
+
+    return R.map(
+      (r: fetchedGitHubRepo) => ({
+        ...r,
+        commits: getCommitsByDayCount(
+          new Date(),
+          DAY_COUNT,
+          getCommitsByUserId(user.id, r.commits)
+        )
+      }),
+      repos
+    )
+  }, [repos, user])
 
   const filteredCommits = useMemo(
-    () => getCommitsByDayCount(new Date(), dayCount, commits),
-    [dayCount, commits]
+    () => R.flatten(R.pluck("commits", filteredRepos)),
+    [filteredRepos]
   )
 
   const commitDates = useMemo(
-    () => getCommitDates(new Date(), dayCount, filteredCommits),
-    [dayCount, filteredCommits]
+    () => getCommitDates(new Date(), DAY_COUNT, filteredCommits),
+    [filteredCommits]
   )
 
-  const monthMarkers = useMemo(
-    () => getMonthMarkers(new Date(), dayCount),
-    [dayCount]
-  )
+  const monthMarkers = useMemo(() => getMonthMarkers(new Date(), DAY_COUNT), [])
 
   useEffect(() => {
     setStatus("loading")
@@ -48,12 +57,6 @@ const useGHUser = (ghUsername: string) => {
 
         setUser(fetchedUser)
         setRepos(fetchedReposWithCommits)
-        setCommits(
-          getCommitsByUserId(
-            fetchedUser.id,
-            R.flatten(R.pluck("commits", fetchedReposWithCommits))
-          )
-        )
 
         setStatus("done")
       } catch (error) {
@@ -64,10 +67,9 @@ const useGHUser = (ghUsername: string) => {
 
   return {
     user,
-    repos,
-    commits,
     status,
     filteredCommits,
+    filteredRepos,
     commitDates,
     monthMarkers
   }

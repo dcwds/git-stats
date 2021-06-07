@@ -1,7 +1,8 @@
 import { renderHook } from "@testing-library/react-hooks"
 import useGHUser from "./use-gh-user"
-import { getCommitsByUserId } from "../../fns"
+import { getCommitsByDayCount, getCommitsByUserId } from "../../fns"
 import ghResponses from "../../mock-data/responses"
+import { DAY_COUNT } from "../../constants"
 import * as R from "ramda"
 
 describe("useGHUser", () => {
@@ -10,26 +11,30 @@ describe("useGHUser", () => {
       useGHUser("valid-user")
     )
 
-    expect(result.current.user).toEqual({})
-    expect(result.current.repos).toEqual([])
-    expect(result.current.commits).toEqual([])
+    expect(result.current.user).toEqual(null)
+    expect(result.current.filteredRepos).toEqual([])
+    expect(result.current.filteredCommits).toEqual([])
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
     expect(result.current.user).toEqual(ghResponses.user)
-    expect(result.current.repos).toEqual(
+    expect(result.current.filteredRepos).toEqual(
       R.map(
         ({ name, description, html_url }) => ({
           name,
           description,
           url: html_url,
-          commits: ghResponses.repoCommits
+          commits: getCommitsByDayCount(
+            new Date(),
+            DAY_COUNT,
+            getCommitsByUserId(ghResponses.user.id, ghResponses.repoCommits)
+          )
         }),
         ghResponses.userRepos
       )
     )
-    expect(result.current.commits).toEqual(
+    expect(result.current.filteredCommits).toEqual(
       getCommitsByUserId(
         ghResponses.user.id,
         ghResponses.userRepos.map(() => ghResponses.repoCommits).flat()
@@ -43,16 +48,16 @@ describe("useGHUser", () => {
       useGHUser("invalid-user")
     )
 
-    expect(result.current.user).toEqual({})
-    expect(result.current.repos).toEqual([])
-    expect(result.current.commits).toEqual([])
+    expect(result.current.user).toEqual(null)
+    expect(result.current.filteredRepos).toEqual([])
+    expect(result.current.filteredCommits).toEqual([])
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toEqual({})
-    expect(result.current.repos).toEqual([])
-    expect(result.current.commits).toEqual([])
+    expect(result.current.user).toEqual(null)
+    expect(result.current.filteredRepos).toEqual([])
+    expect(result.current.filteredCommits).toEqual([])
     expect(result.current.status).toBe("error")
   })
 
@@ -61,16 +66,16 @@ describe("useGHUser", () => {
       useGHUser("network-error")
     )
 
-    expect(result.current.user).toEqual({})
-    expect(result.current.repos).toEqual([])
-    expect(result.current.commits).toEqual([])
+    expect(result.current.user).toEqual(null)
+    expect(result.current.filteredRepos).toEqual([])
+    expect(result.current.filteredCommits).toEqual([])
     expect(result.current.status).toBe("loading")
 
     await waitForNextUpdate()
 
-    expect(result.current.user).toEqual({})
-    expect(result.current.repos).toEqual([])
-    expect(result.current.commits).toEqual([])
+    expect(result.current.user).toEqual(null)
+    expect(result.current.filteredRepos).toEqual([])
+    expect(result.current.filteredCommits).toEqual([])
     expect(result.current.status).toBe("error")
   })
 })

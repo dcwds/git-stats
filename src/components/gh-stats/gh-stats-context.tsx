@@ -1,7 +1,7 @@
 import { createContext, ReactChild } from "react"
 import {
   GitHubUser,
-  GitHubRepo,
+  fetchedGitHubRepo,
   GitHubCommit,
   GraphMonth
 } from "../../interfaces"
@@ -9,10 +9,9 @@ import useGHUser from "../../hooks/use-gh-user"
 import { useParams } from "react-router-dom"
 
 export const StatsContext = createContext<{
-  user: Partial<GitHubUser>
-  repos: Partial<GitHubRepo>[]
-  commits: GitHubCommit[]
+  user: GitHubUser | null
   commitDates: { date: Date; commitCount: number }[]
+  filteredRepos: fetchedGitHubRepo[]
   filteredCommits: GitHubCommit[]
   monthMarkers: GraphMonth[]
 }>({} as any)
