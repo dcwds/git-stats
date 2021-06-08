@@ -17,22 +17,25 @@ const useGHUser = (ghUsername: string) => {
   const [user, setUser] = useState<GitHubUser | null>(null)
   const [repos, setRepos] = useState<fetchedGitHubRepo[]>([])
   const [status, setStatus] = useState<string>("idle")
+  const [now, setNow] = useState<Date | null>(null)
 
-  const filteredRepos = useMemo(() => {
-    if (!user) return []
-
-    return R.map(
-      (r: fetchedGitHubRepo) => ({
-        ...r,
-        commits: getCommitsByDayCount(
-          new Date(),
-          DAY_COUNT,
-          getCommitsByUserId(user.id, r.commits)
-        )
-      }),
-      repos
-    )
-  }, [repos, user])
+  const filteredRepos = useMemo(
+    () =>
+      now && user
+        ? R.map(
+            (r: fetchedGitHubRepo) => ({
+              ...r,
+              commits: getCommitsByDayCount(
+                now,
+                DAY_COUNT,
+                getCommitsByUserId(user.id, r.commits)
+              )
+            }),
+            repos
+          )
+        : [],
+    [repos, user, now]
+  )
 
   const filteredCommits = useMemo(
     () => R.flatten(R.pluck("commits", filteredRepos)),
@@ -40,11 +43,14 @@ const useGHUser = (ghUsername: string) => {
   )
 
   const commitDates = useMemo(
-    () => getCommitDates(new Date(), DAY_COUNT, filteredCommits),
-    [filteredCommits]
+    () => now && getCommitDates(now, DAY_COUNT, filteredCommits),
+    [filteredCommits, now]
   )
 
-  const monthMarkers = useMemo(() => getMonthMarkers(new Date(), DAY_COUNT), [])
+  const monthMarkers = useMemo(
+    () => now && getMonthMarkers(now, DAY_COUNT),
+    [now]
+  )
 
   useEffect(() => {
     setStatus("loading")
@@ -57,7 +63,7 @@ const useGHUser = (ghUsername: string) => {
 
         setUser(fetchedUser)
         setRepos(fetchedReposWithCommits)
-
+        setNow(new Date())
         setStatus("done")
       } catch (error) {
         setStatus("error")

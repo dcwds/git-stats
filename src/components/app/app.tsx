@@ -16,9 +16,8 @@ const App = () => (
           <GH.StatsProvider>
             <>
               <GH.UserProfile />
-              <div className="bg-gray-900 rounded-md text-sm text-gray-300">
-                <GH.UserCommits />
-              </div>
+              <GH.UserCommits />
+              <GH.UserRepos />
             </>
           </GH.StatsProvider>
         </Route>

@@ -9,9 +9,9 @@ describe("timezones", () => {
 
 describe("fns", () => {
   test("gets padded number", () => {
-    expect(fns.roundToWeek(5)).toBe(7)
-    expect(fns.roundToWeek(10)).toBe(14)
-    expect(fns.roundToWeek(30)).toBe(35)
+    expect(fns.toClosestMultipleOf7(5)).toBe(7)
+    expect(fns.toClosestMultipleOf7(10)).toBe(14)
+    expect(fns.toClosestMultipleOf7(30)).toBe(35)
   })
 
   test("gets correct dates", () => {

@@ -1,8 +1,17 @@
 import { GitHubCommit, GraphMonth } from "../interfaces"
 import * as R from "ramda"
 
-export const numbersDesc = (a: number, b: number) => b - a
-export const roundToWeek = (n: number) => 7 * Math.ceil(n / 7)
+// sort fns
+export const sortByNumbersAsc = R.sort((a: number, b: number) => a - b)
+export const sortByNumbersDesc = R.sort((a: number, b: number) => b - a)
+export const sortByDecimalPartDesc = R.sort(
+  (a: number, b: number) => (b % 1) - (a % 1)
+)
+
+// transformer fns
+export const toClosestMultipleOf7 = (n: number) => 7 * Math.ceil(n / 7)
+export const toPercentage = (total: number) => (n: number) => (n / total) * 100
+export const toRoundedDown = (n: number) => Math.floor(n)
 
 // This is not ideal, as we lose access to `Date` localization.
 export const monthNumToText = (n: number) => {
@@ -24,7 +33,7 @@ export const monthNumToText = (n: number) => {
   ][n]
 }
 
-export const getDayRange = R.compose(R.range(0), roundToWeek)
+export const getDayRange = R.compose(R.range(0), toClosestMultipleOf7)
 
 export const numbersToDates = (startDate: Date, dayCount: number) =>
   R.map((n: number) => {
@@ -32,7 +41,7 @@ export const numbersToDates = (startDate: Date, dayCount: number) =>
     dateCopy.setDate(dateCopy.getDate() - n)
 
     return dateCopy
-  }, R.sort(numbersDesc, getDayRange(dayCount)))
+  }, sortByNumbersDesc(getDayRange(dayCount)))
 
 export const fillDatesToSunday = (dates: Date[]) => {
   let earliestDate = dates[0]
@@ -196,3 +205,21 @@ export const withoutEdgeMonth = (edgeNumber: number, months: GraphMonth[]) =>
     // add 1 because CSS grid column does not operate with a starting index of 0
     return m.start + 1 !== edgeNumber
   }, months)
+
+export const getRoundedPercentages = (ns: number[]) => {
+  const total = R.sum(ns)
+  const roundedPercentageSum = R.compose(
+    R.sum,
+    R.map(toRoundedDown),
+    R.map(toPercentage(total))
+  )(ns)
+  let diff = 100 - roundedPercentageSum
+
+  return R.compose(
+    sortByNumbersAsc,
+    R.map((n: number) => (diff-- > 0 ? n + 1 : n)),
+    R.map(toRoundedDown),
+    sortByDecimalPartDesc,
+    R.map(toPercentage(total))
+  )(ns)
+}

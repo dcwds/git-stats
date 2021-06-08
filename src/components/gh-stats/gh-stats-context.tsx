@@ -10,10 +10,10 @@ import { useParams } from "react-router-dom"
 
 export const StatsContext = createContext<{
   user: GitHubUser | null
-  commitDates: { date: Date; commitCount: number }[]
+  commitDates: { date: Date; commitCount: number }[] | null
   filteredRepos: fetchedGitHubRepo[]
   filteredCommits: GitHubCommit[]
-  monthMarkers: GraphMonth[]
+  monthMarkers: GraphMonth[] | null
 }>({} as any)
 
 export const StatsProvider = ({ children }: { children: ReactChild }) => {

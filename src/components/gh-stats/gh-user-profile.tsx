@@ -4,7 +4,7 @@ import { StatsContext } from "./gh-stats-context"
 const UserProfile = () => {
   const { user } = useContext(StatsContext)
   return (
-    <div className="bg-gray-900 p-4 rounded-md mb-6">
+    <div className="card">
       <div className="flex items-center">
         <img
           className="rounded-full mr-6"

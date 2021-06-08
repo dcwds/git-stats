@@ -39,14 +39,14 @@ const UserCommits = () => {
   } = useContext(StatsContext)
 
   return (
-    <div className="p-4">
+    <div className="card">
       <h3>Commits</h3>
       <p>
         They have made {!!commits.length ? commits.length : "no"} commit
         {commits.length !== 1 ? "s" : ""}.
       </p>
 
-      {!!commits.length && (
+      {!!commitDates && !!monthMarkers && (
         <div className="mt-4">
           <div
             className="graph-months"
