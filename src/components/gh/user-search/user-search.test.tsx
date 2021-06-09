@@ -1,4 +1,5 @@
-import GHUserSearch from "./gh-user-search"
+import { StatsProvider } from "../"
+import GHUserSearch from "./user-search"
 import { MemoryRouter, Route, Switch } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
@@ -7,16 +8,18 @@ describe("GHUserSearch", () => {
   const setup = () =>
     render(
       <MemoryRouter>
-        <GHUserSearch />
         <Switch>
-          <Route path="/stats/:username">
-            <p>stats blurb</p>
+          <Route path="/:username?">
+            <GHUserSearch />
+            <StatsProvider>
+              <p>stats blurb</p>
+            </StatsProvider>
           </Route>
         </Switch>
       </MemoryRouter>
     )
 
-  test("stats are rendered when input value is submitted via click", () => {
+  test("stats are rendered when input value is submitted via click", async () => {
     setup()
 
     const input = screen.getByLabelText(/search github user/i)
@@ -30,11 +33,11 @@ describe("GHUserSearch", () => {
     expect(statsBlurb).not.toBeInTheDocument()
 
     userEvent.click(button)
-    statsBlurb = screen.queryByText(/stats blurb/i)
+    statsBlurb = await screen.findByText(/stats blurb/i)
     expect(statsBlurb).toBeInTheDocument()
   })
 
-  test("stats are rendered when input value is submitted via enter key", () => {
+  test("stats are rendered when input value is submitted via enter key", async () => {
     setup()
 
     const input = screen.getByLabelText(/search github user/i)
@@ -49,7 +52,7 @@ describe("GHUserSearch", () => {
 
     userEvent.type(input, "{enter}")
 
-    statsBlurb = screen.queryByText(/stats blurb/i)
+    statsBlurb = await screen.findByText(/stats blurb/i)
     expect(statsBlurb).toBeInTheDocument()
   })
 })

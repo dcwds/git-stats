@@ -13,10 +13,10 @@ import {
 } from "../../fns"
 import * as R from "ramda"
 
-const useGHUser = (ghUsername: string) => {
+const useGHUser = (username: string) => {
   const [user, setUser] = useState<GitHubUser | null>(null)
   const [repos, setRepos] = useState<fetchedGitHubRepo[]>([])
-  const [status, setStatus] = useState<string>("idle")
+  const [status, setStatus] = useState<string>("")
   const [now, setNow] = useState<Date | null>(null)
 
   const filteredRepos = useMemo(
@@ -53,12 +53,18 @@ const useGHUser = (ghUsername: string) => {
   )
 
   useEffect(() => {
+    // url param is optional, so a check is needed
+    if (R.isNil(username)) {
+      setStatus("idle")
+      return
+    }
+
     setStatus("loading")
     ;(async () => {
       try {
         const [fetchedUser, fetchedReposWithCommits] = await Promise.all([
-          fetchGitHubUser(ghUsername),
-          fetchGitHubUserReposWithCommits(ghUsername)
+          fetchGitHubUser(username),
+          fetchGitHubUserReposWithCommits(username)
         ])
 
         setUser(fetchedUser)
@@ -69,7 +75,7 @@ const useGHUser = (ghUsername: string) => {
         setStatus("error")
       }
     })()
-  }, [ghUsername])
+  }, [username])
 
   return {
     user,

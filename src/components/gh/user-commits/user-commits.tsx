@@ -1,7 +1,7 @@
-import { GraphMonth } from "../../interfaces"
+import { GraphMonth } from "../../../interfaces"
 import { useContext } from "react"
-import { StatsContext } from "./gh-stats-context"
-import { withoutEdgeMonth } from "../../fns"
+import { StatsContext } from "../context"
+import { withoutEdgeMonth } from "../../../fns"
 import * as R from "ramda"
 
 const getCommitCountColor = (count: number): string => {

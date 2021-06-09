@@ -1,7 +1,7 @@
 import { useContext, FC } from "react"
-import { StatsContext } from "./gh-stats-context"
-import { fetchedGitHubRepo } from "../../interfaces"
-import { sortByNumbersDesc, getRoundedPercentages } from "../../fns"
+import { StatsContext } from "../context"
+import { fetchedGitHubRepo } from "../../../interfaces"
+import { sortByNumbersDesc, getRoundedPercentages } from "../../../fns"
 import * as R from "ramda"
 
 const UserRepo: FC<Partial<fetchedGitHubRepo> & { percentage: number }> = ({

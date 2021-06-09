@@ -1,4 +1,4 @@
-import useGHUserSearch from "../../hooks/use-gh-user-search"
+import useGHUserSearch from "../../../hooks/use-gh-user-search"
 
 const GHUserSearch = () => {
   const { user, changeUser, searchUser } = useGHUserSearch()
@@ -10,6 +10,7 @@ const GHUserSearch = () => {
         aria-label="search github user"
         type="text"
         placeholder="Search for a GitHub user..."
+        value={user}
         onChange={(e) => changeUser(e)}
         onKeyDown={(e) => searchUser(e)}
       />

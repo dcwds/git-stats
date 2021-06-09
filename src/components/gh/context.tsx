@@ -24,6 +24,12 @@ export const StatsProvider = ({ children }: { children: ReactChild }) => {
     <StatsContext.Provider value={{ ...rest }}>
       {
         {
+          idle: (
+            <p className="text-sm leading-relaxed text-gray-300">
+              GitHub user stats are generated from the past six months of their
+              commit activity within public repositories.
+            </p>
+          ),
           loading: <p>Fetching user data for {username}</p>,
           done: <>{children}</>,
           error: <p>Could not get stats for {username}</p>

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { StatsContext } from "./gh-stats-context"
+import { StatsContext } from "../context"
 
 const UserProfile = () => {
   const { user } = useContext(StatsContext)
