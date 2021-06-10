@@ -4,13 +4,15 @@ import { Handler } from "@netlify/functions"
 const handler: Handler = async (event) => {
   const { username, repo } = event.queryStringParameters
 
+  console.log(repo)
+
   try {
     const commits = await fetch(
       `https://api.github.com/repos/${username}/${repo}/commits`,
       {
         headers: {
-          Authorization: `token ${process.env.GH_TOKEN}`,
-        },
+          Authorization: `token ${process.env.GH_TOKEN}`
+        }
       }
     )
 
@@ -23,20 +25,20 @@ const handler: Handler = async (event) => {
     return {
       headers: {
         "Cache-Control": "public, max-age=3600, s-maxage=3600",
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
       },
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     }
   } catch (error) {
     return {
       headers: {
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
       },
       statusCode: error.statusCode || 500,
       body: JSON.stringify({
-        error: error.message,
-      }),
+        error: error.message
+      })
     }
   }
 }
