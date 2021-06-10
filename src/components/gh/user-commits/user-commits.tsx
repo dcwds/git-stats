@@ -23,7 +23,7 @@ const Cell = ({ date, commitCount }: { date: Date; commitCount: number }) => (
           {!!commitCount ? commitCount : "No"} commit
           {commitCount !== 1 ? "s" : ""}
         </strong>{" "}
-        on {date.toDateString()}
+        on {R.replace(/(\s\d{4})/i, ", $1", date.toDateString())}
       </p>
 
       <div className="arrow-down"></div>
