@@ -7,8 +7,8 @@ const handler: Handler = async (event) => {
   try {
     const user = await fetch(`https://api.github.com/users/${username}`, {
       headers: {
-        Authorization: `token ${process.env.GH_TOKEN}`,
-      },
+        Authorization: `token ${process.env.GH_TOKEN}`
+      }
     })
 
     const data = await user.json()
@@ -20,20 +20,20 @@ const handler: Handler = async (event) => {
     return {
       headers: {
         "Cache-Control": "public, max-age=3600, s-maxage=3600",
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
       },
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     }
   } catch (error) {
     return {
       statusCode: error.statusCode || 500,
       headers: {
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
       },
       body: JSON.stringify({
-        error: error.message,
-      }),
+        error: error.message
+      })
     }
   }
 }
