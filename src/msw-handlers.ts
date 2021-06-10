@@ -1,5 +1,5 @@
 import { rest } from "msw"
-import ghResponses from "./mock-data/responses"
+import ghResponses from "./gh-user/mock-responses"
 
 const handlers = [
   rest.get("/gh-api/gh-user", (req, res, ctx) => {
@@ -16,7 +16,7 @@ const handlers = [
   ),
   rest.get("/gh-api/gh-user-repo-commits", (_, res, ctx) =>
     res(ctx.status(200), ctx.json(ghResponses.repoCommits))
-  ),
+  )
 ]
 
 export default handlers
