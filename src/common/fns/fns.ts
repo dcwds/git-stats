@@ -8,7 +8,7 @@ export const sortByDecimalPartDesc = R.sort(
 )
 
 // transformer fns
-export const toClosestMultipleOf7 = (n: number) => 7 * Math.ceil(n / 7)
+export const toNextMultipleOf7 = (n: number) => 7 * Math.ceil(n / 7)
 export const toPercentage = (total: number) => (n: number) => (n / total) * 100
 export const toRoundedDown = (n: number) => Math.floor(n)
 

@@ -1,7 +1,7 @@
 import { User, Repo, Commit, GraphMonth } from "../interfaces"
 import {
   sortByNumbersDesc,
-  toClosestMultipleOf7,
+  toNextMultipleOf7,
   monthNumToText
 } from "../../common/fns"
 import * as R from "ramda"
@@ -88,7 +88,7 @@ export const fetchUserReposWithCommits = async (
   }
 }
 
-export const getDayRange = R.compose(R.range(0), toClosestMultipleOf7)
+export const getDayRange = R.compose(R.range(0), toNextMultipleOf7)
 
 export const numbersToDates = (startDate: Date, dayCount: number) =>
   R.map((n: number) => {
