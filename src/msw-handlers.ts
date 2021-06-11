@@ -11,12 +11,20 @@ const handlers = [
 
     return res(ctx.status(200), ctx.json(ghResponses.user))
   }),
-  rest.get("/gh-api/gh-user-repos", (_, res, ctx) =>
-    res(ctx.status(200), ctx.json(ghResponses.userRepos))
-  ),
-  rest.get("/gh-api/gh-user-repo-commits", (_, res, ctx) =>
-    res(ctx.status(200), ctx.json(ghResponses.repoCommits))
-  )
+  rest.get("/gh-api/gh-user-repos", (req, res, ctx) => {
+    const username = req.url.searchParams.get("username")
+
+    if (username === "valid-user-with-no-activity")
+      return res(ctx.status(200), ctx.json([]))
+    return res(ctx.status(200), ctx.json(ghResponses.userRepos))
+  }),
+  rest.get("/gh-api/gh-user-repo-commits", (req, res, ctx) => {
+    const username = req.url.searchParams.get("username")
+
+    if (username === "valid-user-with-no-activity")
+      return res(ctx.status(200), ctx.json([]))
+    return res(ctx.status(200), ctx.json(ghResponses.repoCommits))
+  })
 ]
 
 export default handlers
