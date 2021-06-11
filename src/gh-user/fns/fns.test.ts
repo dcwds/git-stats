@@ -43,7 +43,7 @@ describe("fns", () => {
 
   test("gets correct dates", () => {
     // Mon May 31 2021 04:00:00 GMT+0000
-    const dates = fns.getDatesByDayCount(new Date(1622433600 * 1000), 7)
+    const dates = fns.getDatesByDayCount(new Date(), 7)
     const expected = [
       1621742400 * 1000, // sun (filled)
       1621828800 * 1000, // mon (filled)
@@ -61,8 +61,7 @@ describe("fns", () => {
 
   test("gets commits by day range", () => {
     const dayCount = 7
-    // Mon May 31 2021 04:00:00 GMT+0000
-    const latestDate = new Date(1622433600 * 1000)
+    const latestDate = new Date()
     const latestDateCopy = new Date(latestDate.valueOf())
 
     const earliestDate = new Date(
@@ -87,9 +86,8 @@ describe("fns", () => {
   })
 
   test("gets correct dates and commit counts", () => {
-    // Mon May 31 2021 04:00:00 GMT+0000
     const commitDates = fns.getCommitDates(
-      new Date(1622433600 * 1000),
+      new Date(),
       7,
       responses.recentCommits
     )

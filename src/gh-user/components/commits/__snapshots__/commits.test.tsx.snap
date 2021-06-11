@@ -23,32 +23,32 @@ exports[`Commits renders commits graph for valid user 2`] = `
   >
     <div />
     <div
-      style="grid-column: 2 / 6;"
+      style="grid-column: 3 / 6;"
     >
       dec
     </div>
     <div
-      style="grid-column: 6 / 11;"
+      style="grid-column: 7 / 11;"
     >
       jan
     </div>
     <div
-      style="grid-column: 11 / 15;"
+      style="grid-column: 12 / 15;"
     >
       feb
     </div>
     <div
-      style="grid-column: 15 / 19;"
+      style="grid-column: 16 / 19;"
     >
       mar
     </div>
     <div
-      style="grid-column: 19 / 23;"
+      style="grid-column: 20 / 23;"
     >
       apr
     </div>
     <div
-      style="grid-column: 23 / 28;"
+      style="grid-column: 24 / 28;"
     >
       may
     </div>
@@ -77,6 +77,174 @@ exports[`Commits renders commits graph for valid user 2`] = `
       arial-label="graph dates"
       class="graph-dates"
     >
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Sun Nov 29,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Mon Nov 30,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Tue Dec 01,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Wed Dec 02,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Thu Dec 03,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Fri Dec 04,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
+      <div
+        class="has-tooltip"
+        style="background-color: rgb(22, 27, 34);"
+      >
+        <div
+          class="tooltip bg-black p-2 rounded shadow text-xs"
+        >
+          <p>
+            <strong
+              class="text-white"
+            >
+              No
+               commit
+              s
+            </strong>
+             
+            on 
+            Sat Dec 05,  2020
+          </p>
+          <div
+            class="arrow-down"
+          />
+        </div>
+      </div>
       <div
         class="has-tooltip"
         style="background-color: rgb(22, 27, 34);"
@@ -4319,270 +4487,6 @@ exports[`Commits renders commits graph for valid user 2`] = `
              
             on 
             Mon May 31,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Tue Jun 01,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Wed Jun 02,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Thu Jun 03,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Fri Jun 04,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Sat Jun 05,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Sun Jun 06,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Mon Jun 07,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Tue Jun 08,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Wed Jun 09,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Thu Jun 10,  2021
-          </p>
-          <div
-            class="arrow-down"
-          />
-        </div>
-      </div>
-      <div
-        class="has-tooltip"
-        style="background-color: rgb(22, 27, 34);"
-      >
-        <div
-          class="tooltip bg-black p-2 rounded shadow text-xs"
-        >
-          <p>
-            <strong
-              class="text-white"
-            >
-              No
-               commit
-              s
-            </strong>
-             
-            on 
-            Fri Jun 11,  2021
           </p>
           <div
             class="arrow-down"

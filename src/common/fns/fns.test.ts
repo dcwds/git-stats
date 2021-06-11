@@ -3,6 +3,9 @@ import * as fns from "./fns"
 describe("timezones", () => {
   test("should always be UTC", () =>
     expect(new Date().getTimezoneOffset()).toBe(0))
+
+  test("system time should be Mon May 31 2021 04:00:00 GMT+0000", () =>
+    expect(Date.now()).toBe(1622433600 * 1000))
 })
 
 describe("fns", () => {
